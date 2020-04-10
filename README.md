@@ -1,9 +1,9 @@
 # Wookieepedia
-##A Star Wars story
+A Star Wars story
 
-###PROYECTO FRONTEND – STAR WARS APP
+PROYECTO FRONTEND – STAR WARS APP
 
-###Politecnico Gran Colombiano
+Politecnico Gran Colombiano
 
 **Descripción:**
 
