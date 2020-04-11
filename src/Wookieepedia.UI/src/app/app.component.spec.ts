@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'starWarsApp'`, () => {
+  it(`should have as title 'angular-base'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('starWarsApp');
+    expect(app.title).toEqual('angular-base');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('starWarsApp app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('angular-base app is running!');
   });
 });
