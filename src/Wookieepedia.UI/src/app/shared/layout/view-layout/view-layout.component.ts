@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-view-layout',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-layout.component.css']
 })
 export class ViewLayoutComponent implements OnInit {
+  @Input() title: string;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private activatedRoute: ActivatedRoute, private titleService: Title) {
+      
   }
 
+  ngOnInit(): void {
+    this.activatedRoute.data.subscribe(data => {
+      this.titleService.setTitle('Wookieepedia - ' + data.title);
+    });
+  }
 }
