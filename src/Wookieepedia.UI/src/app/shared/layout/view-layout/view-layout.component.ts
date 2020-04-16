@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-view-layout',
   templateUrl: './view-layout.component.html',
-  styleUrls: ['./view-layout.component.css']
+  styleUrls: ['./view-layout.component.scss']
 })
 export class ViewLayoutComponent implements OnInit {
   @Input() title: string;
@@ -16,7 +16,7 @@ export class ViewLayoutComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(data => {
-      this.titleService.setTitle('Wookieepedia - ' + data.title);
+      this.titleService.setTitle(data.title + ' | Wookieepedia');
     });
   }
 }

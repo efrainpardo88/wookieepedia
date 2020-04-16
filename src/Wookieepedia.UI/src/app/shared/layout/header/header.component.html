@@ -1,3 +1,29 @@
-<div class="page-logo"></div>
-<nav></nav>
-<div class="translate-container"></div>
+<div class="page-logo">
+  <img src="/assets/images/wookiee-pedia.png" />
+</div>
+<nav>
+  <ul>
+    <li class="option">HOME</li>
+    <li class="option">ABOUT US</li>
+    <li class="option">MOVIES</li>
+    <li class="option">IN A GALAXY</li>
+  </ul>
+  <div class="search">
+    <form>
+      <i>
+        <fa-icon [icon]="faSearch"></fa-icon>
+      </i>      
+      <input type="search" placeholder="Search..." />
+    </form>
+  </div>
+</nav>
+<div class="translator-container">
+  <div class="translator">
+    <img class="option active" src="/assets/images/han-solo-button.png" alt="Han Solo Button.png" />
+    <img class="option" src="/assets/images/chew-button.png" alt="Chew Button" />
+  </div>
+  <div class="translator-text">
+    <span class="option active">EN</span>
+    <span class="option">WO</span>
+  </div>
+</div>

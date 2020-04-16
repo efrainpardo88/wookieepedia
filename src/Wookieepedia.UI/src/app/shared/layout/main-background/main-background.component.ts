@@ -5,7 +5,7 @@ import { TweenMax } from 'gsap';
   selector: 'app-main-background',
   templateUrl: './main-background.component.html',
   host: { class: "main-background" },
-  styleUrls: ['./main-background.component.css']
+  styleUrls: ['./main-background.component.scss']
 })
 export class MainBackgroundComponent implements OnInit {
 
