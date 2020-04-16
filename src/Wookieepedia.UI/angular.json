@@ -119,6 +119,15 @@
           }
         }
       }
-    }},
-  "defaultProject": "starWarsApp"
+    }
+  },
+  "defaultProject": "starWarsApp",
+  "cli": {
+    "analytics": "5118131e-7eca-45fa-8f1a-596e08646f14"
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

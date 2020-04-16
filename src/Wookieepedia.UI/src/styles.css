@@ -1,1 +1,121 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'DIN Neuzeit Grotesk';
+  src: url(/assets/fonts/din-neuzeit-grotesk.otf) format("opentype")
+}
+@font-face {
+  font-family: 'Open Sans Condensed';
+  src: url(/assets/fonts/open-sans-condensed.ttf) format("truetype");
+}
+@font-face {
+  font-family: 'Trajan Pro';
+  src: url(/assets/fonts/traja-npro.otf) format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: 'DIN Neuzeit Grotesk';
+  font-size: 22px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a, a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-size: 60px;
+}
+
+.option {
+  color: #a29c9c;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.option.active,
+.option:hover {
+  color: #fff;
+}
+
+img.option {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+img.option.active,
+img.option:hover {
+  opacity: 1;
+}
+
+.more {
+  text-align:center;
+}
+
+.more * {
+  display: block;
+  width: auto;
+  margin: 0 auto;
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.more:hover * {
+  color: #a29c9c;
+}
+
+.button {
+  border: 3px #fff solid;
+  font-size: 30px;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  color: #a29c9c;
+  border-color: #a29c9c;
+}
+
+input[type=search],
+input[type=search]:focus,
+input[type=search]:active {
+  width: 100%;
+  height: 100%;
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+  overflow: visible;
+  padding: 0;
+  padding-left: 40px;
+  margin: 0;
+  color: #fff;
+}
+
+input[type=search]::placeholder {
+  color: #fff;
+  font-weight: lighter;
+}
+
+section {
+  padding-top: 4rem;
+
+}
