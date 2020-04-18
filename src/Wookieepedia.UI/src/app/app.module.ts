@@ -9,6 +9,7 @@ import { FooterComponent } from './shared/layout/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { MainBackgroundComponent } from './shared/layout/main-background/main-background.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SocialNetworkComponent } from './shared/layout/social-network/social-network.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    MainBackgroundComponent
+    MainBackgroundComponent,
+    SocialNetworkComponent
   ],
   imports: [
     BrowserModule,
