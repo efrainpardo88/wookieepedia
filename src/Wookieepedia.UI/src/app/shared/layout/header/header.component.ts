@@ -19,13 +19,13 @@ export class HeaderComponent implements OnInit {
   }
 
   scroll = (e): void => {
-    const header = document.querySelector("header");
+    const nav = document.querySelector("nav");
 
     if (e.srcElement.scrollingElement.scrollTop > 100) {
-      header.classList.add("sticky");
+      nav.classList.add("sticky");
     }
     else {
-      header.classList.remove("sticky");
+      nav.classList.remove("sticky");
     }
   };
 
