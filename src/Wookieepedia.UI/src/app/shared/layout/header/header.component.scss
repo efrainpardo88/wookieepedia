@@ -2,14 +2,14 @@ nav {
   display: grid;
   background: rgba(30, 30, 30, 0.80);
   transition: all 0.5s;
-  grid-template: 5rem / 10rem 1fr 300px 10rem;
+  grid-template: 110px / 200px 1fr 300px 200px;
 
   &.sticky {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    grid-template: 4rem / 10rem 1fr 300px 10rem;
+    grid-template: 80px / 200px 1fr 300px 200px;
     opacity: 0.5;
     z-index: 1000;
 

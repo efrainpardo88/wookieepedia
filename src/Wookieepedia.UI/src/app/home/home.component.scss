@@ -18,22 +18,13 @@
   }
 
   .intro {
-    max-width: 600px;
-    height: 400px;
-    margin: 0 auto;
+    height: 1000px;
     overflow: hidden;
-
-    * {
-      font-family: 'Open Sans Condensed';
-      font-weight: bold;
-      font-size: 30px;
-      color: #ddcd74;
-    }
 
     .fade {
       position: relative;
       width: 100%;
-      min-height: 60vh;
+      height: 200px;
       top: -25px;
       background-image: linear-gradient(0deg, transparent, black 75%);
       z-index: 1;
@@ -43,30 +34,30 @@
       display: flex;
       justify-content: center;
       position: relative;
-      height: 800px;
+      height: 1000px;
       color: #feda4a;
-      font-size: 400%;
-      font-weight: bold;
-      letter-spacing: 3px;
-      line-height: 100%;
-      perspective: 1000px;
+      perspective: 400px;
       text-align: justify;
+      font-family: 'Open Sans Condensed';
+      font-weight: bold;
+      color: #ddcd74;
     }
 
     .crawl {
       position: relative;
-      top: 99999px;
+      top: 999px;
       transform-origin: 50% 100%;
-      animation: crawl 30s linear infinite;
+      animation: crawl 40s linear infinite;
+
+      * {
+        font-size: 60px;
+        font-weight: bold;
+        letter-spacing: 5px;
+        line-height: 150px;
+      }
 
       .title {
-        font-size: 90%;
         text-align: center;
-
-        h1 {
-          margin: 0 0 100px;
-          text-transform: uppercase;
-        }
       }
     }
   }
@@ -80,6 +71,6 @@
 
   100% {
     top: -6000px;
-    transform: rotateX(25deg) translateZ(-2500px);
+    transform: rotateX(25deg) translateZ(-2000px);
   }
 }

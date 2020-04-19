@@ -16,6 +16,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   color: #fff;
   font-family: 'DIN Neuzeit Grotesk';
   font-size: 22px;
@@ -63,8 +66,12 @@ input[type=search]::placeholder {
   font-weight: lighter;
 }
 
+.ng-fa-icon {
+  color: #fff;
+}
+
 .center {
-  text-align:center;
+  text-align: center;
 }
 
 .text-2 {
@@ -130,5 +137,5 @@ section {
 }
 
 .section-content {
-  padding: 0 10rem;
+  padding: 0 200px;
 }
