@@ -10,67 +10,81 @@
 #about-us {
   margin-top: 200px;
 
-  h3 {
-    font-family: 'Open Sans Condensed';
-    font-weight: 100;
-    color: #1a7c88;
-    font-size: 50px;
-  }
-
   .intro {
-    height: 1000px;
+    position: relative;
+    height: 500px;
     overflow: hidden;
 
-    .fade {
-      position: relative;
-      width: 100%;
-      height: 200px;
-      top: -25px;
-      background-image: linear-gradient(0deg, transparent, black 75%);
-      z-index: 1;
+    h3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: 'Open Sans Condensed';
+      font-weight: 100;
+      color: #1a7c88;
+      font-size: 50px;
+      z-index: 100;
     }
 
-    .star-wars {
-      display: flex;
-      justify-content: center;
-      position: relative;
-      height: 1000px;
-      color: #feda4a;
-      perspective: 400px;
-      text-align: justify;
-      font-family: 'Open Sans Condensed';
-      font-weight: bold;
-      color: #ddcd74;
+    .fade {
+      position: absolute;
+      top: 0;
+      left: 0px;
+      width: 100%;
+      height: 200px;
+      background-image: linear-gradient(0deg, transparent, black 75%);
+      z-index: 10;
     }
 
     .crawl {
-      position: relative;
-      top: 999px;
+      position: absolute;
+      width: 100%;
+      height: 80em;
+      bottom: 0;
+      left: 50%;
+      margin-left: -50%;
+      text-align: justify;
+      overflow: hidden;
       transform-origin: 50% 100%;
-      animation: crawl 40s linear infinite;
+      transform: perspective(300px) rotateX(25deg);
 
-      * {
-        font-size: 60px;
-        font-weight: bold;
-        letter-spacing: 5px;
-        line-height: 150px;
-      }
+      .crawl-text {
+        position: absolute;
+        top: calc(100% - 50px);
+        animation: scroll 60s linear infinite;
 
-      .title {
-        text-align: center;
+        * {
+          font-family: 'Pathway Gothic One', sans-serif;
+          font-size: 40px;
+          font-weight: bold;
+          line-height: 100px;
+          color: #feda4a;
+        }
+
+        p {
+          text-align: justify;
+        }
+
+        .title {
+          h1 {
+            margin: 0;
+          }
+
+          p {
+            text-align: center;
+          }
+        }
       }
     }
   }
 }
 
-@keyframes crawl {
+@keyframes scroll {
   0% {
-    top: -100px;
-    transform: rotateX(20deg) translateZ(0);
+    top: calc(100% - 50px);
   }
 
   100% {
-    top: -6000px;
-    transform: rotateX(25deg) translateZ(-2000px);
+    top: -30%;
   }
 }

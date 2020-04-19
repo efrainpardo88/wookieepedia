@@ -133,7 +133,8 @@ img.option:hover {
 }
 
 section {
-  padding: 4rem 0;
+  position: relative;
+  padding: 120px 0;
 }
 
 .section-content {
