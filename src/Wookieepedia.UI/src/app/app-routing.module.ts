@@ -8,12 +8,9 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
     data: { title: 'HOME' }
-  }
-];
-
-const router: Routes = [
+  },
   {
-   path: '/search',
+   path: 'search',
    component: SearchComponent,
    data: { title: 'search' }
 

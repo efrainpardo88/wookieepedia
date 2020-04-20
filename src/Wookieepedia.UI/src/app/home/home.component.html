@@ -1,5 +1,3 @@
-<router-outlet></router-outlet>
-
 <app-view-layout>
   <section id="home">
     <img src="/assets/images/wookiee-pedia-star-wars.png" alt="Wookieepedia" />
@@ -31,7 +29,6 @@
       </div>
     </div>
   </section>
-
   <section class="carousel">
     <div class="carousel__container">
       <div class="carousel-item">
@@ -44,8 +41,7 @@
           <p class="carousel-item__details--title">Título descriptivo</p>
           <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
         </div>
-      </div>
-     
+      </div>     
       <div class="carousel-item">
         <img class="carousel-item__img" src="" alt="img">
         <div class="carousel-item__details">
@@ -107,55 +103,42 @@
       </div>
     </div>
   </section>
-
-
-
-<section>
-  <div *ngFor ="let galaxi of galaxi" class="galaxi">
-    <img [src]="galaxi.image" alt="">
-    <div class="texto-encima"><h1>{{galaxi.title}}</h1></div>
-    <div class="centrado"><h3>orem Ipsum es simplemente un texto ficticio de la industria de impresión y  composición tipográfica. Lorem Ipsum ha sido el texto ficticio estándar de la industria desde el año 1500, cuando una impresora desconocida tomó una galera de tipo y br la mezcló para hacer un libro de muestras. Ha sobrevivido no solo cinco siglos, sino también el salto a la composición electrónica,</h3></div>
-    
-  </div>
-  <div class="more">
-    <a href="#about-us">SHOW MORE</a>
-    <fa-icon class="more" [icon]="faChevronDown"></fa-icon>
-  </div>  
-</section>
-
-
-
-
-<section id="portafolio" class="portfolio">
-  <div class="container">
-  <article class="project">
-      <div class="project-details">
-        <nav class="menu_tex">
-          <ol>
-            <li>
-              <a class="link" href="#nombre">Nombre</a>
-            </li>
-            <li>
-              <a class="link" href="#nombre2">nombre2</a>
-            </li>
-            <li>
-              <a class="link" href="#nombre3">nombre3</a>
-            </li>
-            <li>
-              <a class="link" href="#nombre3">nombre3</a>
-            </li>
-          </ol>
-        </nav>
-      </div>
-      <figure class="project-imageContainer2">
-        <img class="project-image2" width="" src="/assets/images/wook.png" alt="star wars">
-      </figure>
-    </article>
-  </div>
-  
-</section>
-
+  <section>
+    <div *ngFor ="let galaxi of galaxi" class="galaxi">
+      <img [src]="galaxi.image" alt="">
+      <div class="texto-encima"><h1>{{galaxi.title}}</h1></div>
+      <div class="centrado"><h3>orem Ipsum es simplemente un texto ficticio de la industria de impresión y  composición tipográfica. Lorem Ipsum ha sido el texto ficticio estándar de la industria desde el año 1500, cuando una impresora desconocida tomó una galera de tipo y br la mezcló para hacer un libro de muestras. Ha sobrevivido no solo cinco siglos, sino también el salto a la composición electrónica,</h3></div>    
+    </div>
+    <div class="more">
+      <a href="#about-us">SHOW MORE</a>
+      <fa-icon class="more" [icon]="faChevronDown"></fa-icon>
+    </div>  
+  </section>
+  <section id="portafolio" class="portfolio">
+    <div class="container">
+    <article class="project">
+        <div class="project-details">
+          <nav class="menu_tex">
+            <ol>
+              <li>
+                <a class="link" href="#nombre">Nombre</a>
+              </li>
+              <li>
+                <a class="link" href="#nombre2">nombre2</a>
+              </li>
+              <li>
+                <a class="link" href="#nombre3">nombre3</a>
+              </li>
+              <li>
+                <a class="link" href="#nombre3">nombre3</a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <figure class="project-imageContainer2">
+          <img class="project-image2" width="" src="/assets/images/wook.png" alt="star wars">
+        </figure>
+      </article>
+    </div>  
+  </section>
 </app-view-layout>
-
-
-  
