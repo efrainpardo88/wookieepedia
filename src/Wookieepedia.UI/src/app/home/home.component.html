@@ -106,51 +106,8 @@
     </div>
   </section>
 
-  <section id="portafolio" class="portfolio">
-    <div class="container">
-    <article class="project">
-      <figure class="project-imageContainer">
-
-        <h3 class="project-title">InGalaxi</h3>
-        <p class="project-description">En la guerra estelar
-          se enfrenta el bien y el mal
-          todos pueden viajar pero
-          solo algunos llegaran
-          </p>
-        <img class="project-image"  src="/assets/images/InGalaxi.png" alt="WOOKI PELICULA">
-      </figure>
-    </article>
-    <article class="project">
-        <div class="project-details">
-          <nav class="menu_tex">
-            <ol>
-              <li>
-                <a class="link" href="#nombre">Nombre</a>
-              </li>
-              <li>
-                <a class="link" href="#nombre2">nombre2</a>
-              </li>
-              <li>
-                <a class="link" href="#nombre3">nombre3</a>
-              </li>
-              <li>
-                <a class="link" href="#nombre3">nombre3</a>
-              </li>
-            </ol>
-          </nav>
-        </div>
-        <figure class="project-imageContainer2">
-          <img class="project-image2" width="" src="/assets/images/wook.png" alt="star wars">
-        </figure>
-      </article>
-    </div>
-    
-  </section>
 
 
-  
-
- 
 <section>
   <div *ngFor ="let galaxi of galaxi" class="galaxi">
     <img [src]="galaxi.image" alt="">
@@ -164,12 +121,37 @@
   </div>  
 </section>
 
-<div *ngFor ="let Wook of Wook">
-  {{Wook.title}}
-    <img [src]="Wook.image" alt="">
-</div>
 
-<section id="about-us"></section>
+
+
+<section id="portafolio" class="portfolio">
+  <div class="container">
+  <article class="project">
+      <div class="project-details">
+        <nav class="menu_tex">
+          <ol>
+            <li>
+              <a class="link" href="#nombre">Nombre</a>
+            </li>
+            <li>
+              <a class="link" href="#nombre2">nombre2</a>
+            </li>
+            <li>
+              <a class="link" href="#nombre3">nombre3</a>
+            </li>
+            <li>
+              <a class="link" href="#nombre3">nombre3</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <figure class="project-imageContainer2">
+        <img class="project-image2" width="" src="/assets/images/wook.png" alt="star wars">
+      </figure>
+    </article>
+  </div>
+  
+</section>
 
 </app-view-layout>
 
