@@ -29,6 +29,7 @@
       </div>
     </div>
   </section>
+
   <section class="carousel">
     <div class="carousel__container">
       <div class="carousel-item">
@@ -148,4 +149,29 @@
 
 
   
+
+ 
+<section>
+  <div *ngFor ="let galaxi of galaxi" class="galaxi">
+    <img [src]="galaxi.image" alt="">
+    <div class="texto-encima"><h1>{{galaxi.title}}</h1></div>
+    <div class="centrado"><h3>orem Ipsum es simplemente un texto ficticio de la industria de impresión y  composición tipográfica. Lorem Ipsum ha sido el texto ficticio estándar de la industria desde el año 1500, cuando una impresora desconocida tomó una galera de tipo y br la mezcló para hacer un libro de muestras. Ha sobrevivido no solo cinco siglos, sino también el salto a la composición electrónica,</h3></div>
+    
+  </div>
+  <div class="more">
+    <a href="#about-us">SHOW MORE</a>
+    <fa-icon class="more" [icon]="faChevronDown"></fa-icon>
+  </div>  
+</section>
+
+<div *ngFor ="let Wook of Wook">
+  {{Wook.title}}
+    <img [src]="Wook.image" alt="">
+</div>
+
+<section id="about-us"></section>
+
 </app-view-layout>
+
+
+  
