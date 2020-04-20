@@ -19,6 +19,13 @@ export class MainBackgroundComponent implements OnInit {
     this.parallaxIt(e, ".stars-1", -30);
     this.parallaxIt(e, ".stars-2", -30);
     this.parallaxIt(e, ".death-star", -80);
+    this.parallaxIt(e, ".caza-1", -200);
+    this.parallaxIt(e, ".caza-2", -100);
+    this.parallaxIt(e, ".caza-3", -40);
+    this.parallaxIt(e, ".x-wing-1", -280);
+    this.parallaxIt(e, ".x-wing-2", -90);
+    this.parallaxIt(e, ".falcon", 200);
+    this.parallaxIt(e, ".tie", 50);
   }
 
   parallaxIt(e, target, movement) {

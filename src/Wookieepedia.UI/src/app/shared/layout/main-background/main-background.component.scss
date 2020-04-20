@@ -10,6 +10,7 @@
   animation: fadeout 0.3s infinite;
   animation-delay: 1.5s;
 }
+
 .stars-2 {
   position: fixed;
   top: 50%;
@@ -21,6 +22,7 @@
   background-size: cover;
   animation: fadeout 0.5s infinite;
 }
+
 .death-star {
   position: absolute;
   top: 120px;
@@ -29,6 +31,49 @@
   max-width: 740px;
   height: auto;
 }
+
+.caza-3 {
+  position: absolute;
+  top: 650px;
+  right: 200px;
+}
+
+.caza-2 {
+  position: absolute;
+  top: 670px;
+  right: 100px;
+}
+
+.caza-1 {
+  position: absolute;
+  top: 750px;
+  right: 170px;
+}
+
+.x-wing-2 {
+  position: absolute;
+  top: 800px;
+  left: 60%;
+}
+
+.x-wing-1 {
+  position: absolute;
+  top: 900px;
+  left: 45%;
+}
+
+.falcon {
+  position: absolute;
+  top: 1100px;
+  left: 100px;
+}
+
+.tie {
+  position: absolute;
+  top: 1300px;
+  right: 150px;
+}
+
 
 @keyframes fadeout {
   0% {
