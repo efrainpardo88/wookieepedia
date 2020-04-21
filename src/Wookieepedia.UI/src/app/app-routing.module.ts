@@ -1,14 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import {ResoursesComponent} from './resourses/resourses.component'
 
 
 const routes: Routes = [
   {
-    path: '',
+     path: '', redirectTo: 'home', pathMatch: 'prefix' 
+  },
+  {
+    path: 'home',
     component: HomeComponent,
-    data: { title: 'HOME' }
-  }
+    //data: { title: 'HOME' },
+  },
+  {
+    path: 'resourses',
+    component: ResoursesComponent
+
+  },
+  { path: '**', redirectTo: 'home'},
 ];
 
 @NgModule({
