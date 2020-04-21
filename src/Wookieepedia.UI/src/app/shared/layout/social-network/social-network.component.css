@@ -1,0 +1,10 @@
+.social-icon,
+.social-icon * {
+  font-size: 40px;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  transform: scale(1.3);  
+}
