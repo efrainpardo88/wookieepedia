@@ -2,7 +2,7 @@
   position: relative;
   min-height: 100vh;
   display: grid;
-  grid-template: 150px 1fr 150px / 1fr;
+  grid-template: 150px 1fr 120px / 1fr;
 }
 
 header {
@@ -37,6 +37,7 @@ footer {
   position: fixed;
   top: 50%;
   right: 0;
+  transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.50);
   width: 100px;
   height: 200px;
@@ -44,4 +45,5 @@ footer {
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
+  z-index: 100;
 }
