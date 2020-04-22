@@ -125,6 +125,7 @@ img.option:hover {
   padding: 10px 80px;
   cursor: pointer;
   transition: all 0.3s;
+  color: #fff;
 }
 
 .button:hover {
