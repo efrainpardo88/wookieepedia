@@ -29,8 +29,7 @@ import { SearchComponent } from './search/search.component';
     SocialNetworkComponent,
 
     ResoursesComponent,
-    MoviesComponent
-
+    MoviesComponent,
     SearchComponent
 
   ],

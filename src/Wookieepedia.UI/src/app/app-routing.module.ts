@@ -33,14 +33,14 @@ const routes: Routes = [
       component: MoviesComponent
   
     },
+    {
+     path: 'search',
+     component: SearchComponent,
+     data: { title: 'search' }
+  
+    },
     ]
     //data: { title: 'HOME' },
-  },
-  {
-   path: 'search',
-   component: SearchComponent,
-   data: { title: 'search' }
-
   },
   { path: '**', redirectTo: 'home'},
 
