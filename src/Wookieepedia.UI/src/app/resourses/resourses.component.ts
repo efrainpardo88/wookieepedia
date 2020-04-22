@@ -16,8 +16,8 @@ export class ResoursesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.activatedRoute.data.subscribe(data => {
-      this.titleService.setTitle(data.title + ' | Wookieepedia');
-    });
+  
+    this.titleService.setTitle('Resourses | Wookieepedia');
+    
   }
 }

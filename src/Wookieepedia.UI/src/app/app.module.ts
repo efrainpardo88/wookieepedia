@@ -11,6 +11,7 @@ import { MainBackgroundComponent } from './shared/layout/main-background/main-ba
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SocialNetworkComponent } from './shared/layout/social-network/social-network.component';
 import { ResoursesComponent } from './resourses/resourses.component';
+import { MoviesComponent } from './movies/movies.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ResoursesComponent } from './resourses/resourses.component';
     HomeComponent,
     MainBackgroundComponent,
     SocialNetworkComponent,
-    ResoursesComponent
+    ResoursesComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
