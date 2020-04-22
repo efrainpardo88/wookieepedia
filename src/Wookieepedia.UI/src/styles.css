@@ -16,12 +16,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+ 
 }
 
 body {
   color: #fff;
   font-family: 'DIN Neuzeit Grotesk';
   font-size: 22px;
+  width: 100%;
 }
 
 html {
@@ -30,6 +33,7 @@ html {
 
 a, a:visited {
   text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
@@ -135,9 +139,14 @@ img.option:hover {
 
 section {
   position: relative;
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 .section-content {
   padding: 0 200px;
+}
+
+.col-2 {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
 }

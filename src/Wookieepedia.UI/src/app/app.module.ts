@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { MainBackgroundComponent } from './shared/layout/main-background/main-background.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SocialNetworkComponent } from './shared/layout/social-network/social-network.component';
+import { SearchComponent } from './search/search.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { SocialNetworkComponent } from './shared/layout/social-network/social-ne
     FooterComponent,
     HomeComponent,
     MainBackgroundComponent,
-    SocialNetworkComponent
+    SocialNetworkComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
