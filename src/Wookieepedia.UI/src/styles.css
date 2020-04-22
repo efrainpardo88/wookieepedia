@@ -33,6 +33,7 @@ html {
 
 a, a:visited {
   text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
@@ -128,6 +129,7 @@ img.option:hover {
   padding: 10px 80px;
   cursor: pointer;
   transition: all 0.3s;
+  color: #fff;
 }
 
 .button:hover {
@@ -137,9 +139,14 @@ img.option:hover {
 
 section {
   position: relative;
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 .section-content {
   padding: 0 200px;
+}
+
+.col-2 {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
 }
