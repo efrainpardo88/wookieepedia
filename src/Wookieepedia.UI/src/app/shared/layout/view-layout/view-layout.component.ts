@@ -15,8 +15,8 @@ export class ViewLayoutComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.activatedRoute.data.subscribe(data => {
-      this.titleService.setTitle(data.title + ' | Wookieepedia');
-    });
+
+      this.titleService.setTitle('Home | Wookieepedia');
+    
   }
 }
