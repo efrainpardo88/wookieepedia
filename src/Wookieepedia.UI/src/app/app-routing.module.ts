@@ -5,7 +5,6 @@ import { HomeComponent } from './home/home.component';
 import {ResoursesComponent} from './resourses/resourses.component'
 import { AppComponent } from './app.component';
 import { ViewLayoutComponent } from './shared/layout/view-layout/view-layout.component';
-import { MoviesComponent } from './movies/movies.component';
 
 import {SearchComponent} from './search/search.component';
 
@@ -25,24 +24,13 @@ const routes: Routes = [
     },
     {
       path: 'resourses',
-      component: ResoursesComponent
-  
+      component: ResoursesComponent  
     },
     {
-      path: 'movies',
-      component: MoviesComponent
-  
-    },
-    ]
-    //data: { title: 'HOME' },
-  },
-  {
-   path: 'search',
-   component: SearchComponent,
-   data: { title: 'search' }
-
-  },
-  { path: '**', redirectTo: 'home'},
+      path: 'search',
+      component: SearchComponent
+    }]
+  }
 
 ];
 

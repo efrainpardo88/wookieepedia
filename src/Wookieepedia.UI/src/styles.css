@@ -146,7 +146,7 @@ section {
   padding: 0 200px;
 }
 
-.col-2 {
+.two-column {
   display: grid;
   grid-template-columns: 2fr 2fr;
 }
