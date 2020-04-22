@@ -10,6 +10,15 @@
   padding: 50px 10% 50px 10%;
 }
 
+.imgsubtitulo{
+  text-align: center;
+
+}
+.readmore{
+  text-align: center;
+  font-size: 15px;
+}
+
 /* .imgtitulo{
   display: inline-block;
   width: 20%;
