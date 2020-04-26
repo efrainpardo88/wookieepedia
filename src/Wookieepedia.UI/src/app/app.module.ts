@@ -12,7 +12,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SocialNetworkComponent } from './shared/layout/social-network/social-network.component';
 
 import { ResoursesComponent } from './resourses/resourses.component';
-import { MoviesComponent } from './movies/movies.component';
 
 import { SearchComponent } from './search/search.component';
 
@@ -29,7 +28,6 @@ import { SearchComponent } from './search/search.component';
     SocialNetworkComponent,
 
     ResoursesComponent,
-    MoviesComponent,
     SearchComponent
 
   ],
