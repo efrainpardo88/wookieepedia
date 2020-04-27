@@ -34,52 +34,17 @@
 
   </div>
 </section>
-<section id="movies">
-  <div class="movies-header">
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-  </div>
-  <h2>MOVIES</h2>
-  <h3 class="center">look all the information the Star Wars</h3>
-  <div class="center">
-    <img src="/assets/images/categories/movies/episodio1.png" alt="episodio1 Star Wars" title="La amenaza fantasma" class="episodios" />
-    <img src="/assets/images/categories/movies/episodio2.png" alt="episodio2 Star Wars" title="El ataque de los clones" class="episodios" />
-    <img src="/assets/images/categories/movies/episodio3.png" alt="episodio3 Star Wars" title="La venganza de los Sith" class="episodios" />
-    <img src="/assets/images/categories/movies/episodio4.png" alt="episodio4 Star Wars" title="Una nueva esperanza" class="episodios" />
-    <img src="/assets/images/categories/movies/episodio5.png" alt="episodio5 Star Wars" title="El Imperio contraataca" class="episodios" />
-    <br>
-    <img src="/assets/images/categories/movies/episodio6.png" alt="episodio6 Star Wars" title="El retorno del Jedi" class="episodios" />
-    <img src="/assets/images/categories/movies/episodio7.png" alt="episodio7 Star Wars" title="El despertar de la Fuerza" class="episodios" />
-    <img src="/assets/images/categories/movies/episodio8.png" alt="episodio8 Star Wars" title="Los últimos Jedi" class="episodios" />
-    <img src="/assets/images/categories/movies/episodio9.png" alt="episodio9 Star Wars" title="El ascenso de Skywalker" class="episodios" />
-    <img src="/assets/images/categories/movies/episodio10.png" alt="episodio10 Star Wars" title="Han solo" class="episodios" />
-  </div>
-  <br><br>
-  <div class="center">
-    <a href="/search?category=movies" class="button">SEARCH</a>
-  </div>
-</section>
-<section id="in-a-galaxy">
-  <div class="two-column">
-    <div class="section-content">
-      <h2>IN A GALAXY</h2>
-      <h3>Find all the information about your favorite saga, characters, vehicles, tarships, planets and teh different races that habit the Star Wars Universe</h3>
-    </div>
-  </div>
-  <div class="more">
-    <a href="#categories">SHOW MORE</a>
-    <fa-icon class="more" [icon]="faChevronDown"></fa-icon>
-  </div>
-</section>
+
 <section id="categories">
   <div class="two-column">
     <div class="section-content">
-      <a href="/search?category=characters"><h2>CHARACTERS</h2></a>
-      <a href="/search?category=planets"><h2>PLANETS</h2></a>
-      <a href="/search?category=species"><h2>SPECIES</h2></a>
-      <a href="/search?category=starships"><h2>STARSHIPS</h2></a>
-      <a href="/search?category=vehicles"><h2>VEHICLES</h2></a>
+      <a [routerLink]="['/resourses/people']" [queryParams]="{recurso: '1'}"><h2>CHARACTERS</h2></a>
+      <a [routerLink]="['/resourses/planets']" [queryParams]=""><h2>PLANETS</h2></a>
+      <a [routerLink]="['/resourses/species']" [queryParams]=""><h2>SPECIES</h2></a>
+      <a [routerLink]="['/resourses/starships']" [queryParams]=""><h2>STARSHIPS</h2></a>
+      <a [routerLink]="['/resourses/vehicles']" [queryParams]=""><h2>VEHICLES</h2></a>
+      <a [routerLink]="['/resourses/films']" [queryParams]=""><h2>FILMS</h2></a>
+
       <div class="center"><a class="button" href="/search">SEARCH</a></div>        
     </div>
     <img src="/assets/images/star-wars.png" alt="Star Wars"/>
