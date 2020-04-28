@@ -7,6 +7,12 @@ import { AppComponent } from './app.component';
 import { ViewLayoutComponent } from './shared/layout/view-layout/view-layout.component';
 
 import {SearchComponent} from './search/search.component';
+import { PeopleComponent } from './resourses/people/people.component';
+import { PlanetsComponent } from './resourses/planets/planets.component';
+import { FilmsComponent } from './resourses/films/films.component';
+import { SpeciesComponent } from './resourses/species/species.component';
+import { VehiclesComponent } from './resourses/vehicles/vehicles.component';
+import { StarshipsComponent } from './resourses/starships/starships.component';
 
 
 const routes: Routes = [
@@ -24,7 +30,34 @@ const routes: Routes = [
     },
     {
       path: 'resourses',
-      component: ResoursesComponent  
+      component: ResoursesComponent,
+      children: [
+        {
+        path: 'people',
+        component: PeopleComponent
+        },
+        {
+        path: 'planets',
+        component: PlanetsComponent
+        },
+        {
+        path: 'films',
+        component: FilmsComponent
+        },
+        {
+        path: 'species',
+        component: SpeciesComponent
+        },
+        {
+        path: 'vehicles',
+        component: VehiclesComponent
+        },
+        {
+        path: 'starships',
+        component: StarshipsComponent
+        },
+      ]  
+      
     },
     {
       path: 'search',

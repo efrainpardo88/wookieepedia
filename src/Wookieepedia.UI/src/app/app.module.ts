@@ -14,7 +14,14 @@ import { SocialNetworkComponent } from './shared/layout/social-network/social-ne
 import { ResoursesComponent } from './resourses/resourses.component';
 
 import { SearchComponent } from './search/search.component';
+import { PeopleComponent } from './resourses/people/people.component';
+import { PlanetsComponent } from './resourses/planets/planets.component';
+import { FilmsComponent } from './resourses/films/films.component';
+import { SpeciesComponent } from './resourses/species/species.component';
+import { VehiclesComponent } from './resourses/vehicles/vehicles.component';
+import { StarshipsComponent } from './resourses/starships/starships.component';
 
+import { HttpClientModule }    from '@angular/common/http';
 
 
 @NgModule({
@@ -26,15 +33,21 @@ import { SearchComponent } from './search/search.component';
     HomeComponent,
     MainBackgroundComponent,
     SocialNetworkComponent,
-
     ResoursesComponent,
-    SearchComponent
-
+    SearchComponent,
+    PeopleComponent,
+    PlanetsComponent,
+    FilmsComponent,
+    SpeciesComponent,
+    VehiclesComponent,
+    StarshipsComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
