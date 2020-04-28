@@ -24,7 +24,7 @@ const routes: Routes = [
     component: ViewLayoutComponent,
 
     children: [{
-      path: 'home',
+      path: '',
       component: HomeComponent
     },
     {
