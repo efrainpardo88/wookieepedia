@@ -22,6 +22,11 @@ import { VehiclesComponent } from './resourses/vehicles/vehicles.component';
 import { StarshipsComponent } from './resourses/starships/starships.component';
 
 import { HttpClientModule }    from '@angular/common/http';
+import { HomeHeaderComponent } from './home/home-header/home-header.component';
+import { HomeCategoriesComponent } from './home/home-categories/home-categories.component';
+import { HomeInAGalaxyComponent } from './home/home-in-a-galaxy/home-in-a-galaxy.component';
+import { HomeMoviesComponent } from './home/home-movies/home-movies.component';
+import { HomeAboutUsComponent } from './home/home-about-us/home-about-us.component';
 
 
 @NgModule({
@@ -40,7 +45,12 @@ import { HttpClientModule }    from '@angular/common/http';
     FilmsComponent,
     SpeciesComponent,
     VehiclesComponent,
-    StarshipsComponent
+    StarshipsComponent,
+    HomeHeaderComponent,
+    HomeCategoriesComponent,
+    HomeInAGalaxyComponent,
+    HomeMoviesComponent,
+    HomeAboutUsComponent
     
   ],
   imports: [
