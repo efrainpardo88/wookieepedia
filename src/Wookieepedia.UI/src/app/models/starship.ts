@@ -1,6 +1,6 @@
 import { Card } from './card';
 
-export interface Movies {
+export interface Starship {
     title: string;
     episode_id: number;
     opening_crawl: string;

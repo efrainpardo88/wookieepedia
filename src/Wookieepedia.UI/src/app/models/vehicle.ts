@@ -1,6 +1,6 @@
 import { Card } from './card';
 
-export interface Vehicles {
+export interface Vehicle {
   name: string;
   model: string;
   vehicle_class: string;

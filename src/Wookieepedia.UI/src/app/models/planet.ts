@@ -1,6 +1,6 @@
 import { Card } from './card';
 
-export interface Planets {
+export interface Planet {
     name: string;
     diameter: string;
     rotation_period: string;
