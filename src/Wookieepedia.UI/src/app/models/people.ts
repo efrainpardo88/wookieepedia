@@ -1,6 +1,6 @@
 import { Card } from './card';
 
-export interface Character {
+export interface People {
   name: string;
   height: number;
   mass: number;
@@ -9,8 +9,8 @@ export interface Character {
   eye_color: string;
   birth_year: string;
   gender: string;
-  homeworld: LinkStyle;
-  movies: Card[];
+  homeworld: string;
+  films: Card[];
   species: Card[];
   vehicles: Card[];
   starships: Card[];

@@ -10,6 +10,6 @@ export interface Starship {
     species: Card[];
     starships: Card[];
     vehicles: Card[];
-    characters: Card[];
+    people: Card[];
     planets: Card[]; 
 }
