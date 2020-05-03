@@ -1,26 +1,26 @@
 import { Injectable } from '@angular/core';
-import {HttpHeaders, HttpCliente} from '@angular/common/http';
-import {Observable} from 'rxjs';
-import{Vehicles} from '../models/vehicles';
+import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Vehicle } from '../models/Vehicle';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VehiclesService {
 
-  private baseur1 = 'http://swapi.py4e.com/api/';
-  httpOptions ={
-    headers: new HttpHeaders({'content.Type':'aplication/jason', 'Acces-Control-Allow-Origin': '*' })
+  private baseurl = 'http://swapi.py4e.com/api/';  // URL to web api
+
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' })
   };
 
   constructor(
-    private http: HttpClient,) { }
+    private http: HttpClient
 
-    getVehicleById (id: string)  Observable<Vehicles> {
-      return this.http.get<Vehicles>(this.baseur1 + '/people/' + id + '/?format=jason' )
-    }
+  ) { }
 
-    getVehicles (){}
-    getVehiclesByFilter (filter: string){}
-    getVehiclesByUrlEndpoint (url: string){}
+  getVehicleById(id: string): Observable<Vehicle> {
+    return this.http.get<Vehicle>(this.baseurl + '/vehicle/' + id + '/?format=json');
   }
+
+}

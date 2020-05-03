@@ -1,4 +1,4 @@
-import { Card } from './card';
+import { Resource } from './resource';
 
 export interface People {
   name: string;
@@ -10,11 +10,12 @@ export interface People {
   birth_year: string;
   gender: string;
   homeworld: string;
-  films: Card[];
-  species: Card[];
-  vehicles: Card[];
-  starships: Card[];
+  films: Resource[];
+  species: Resource[];
+  vehicles: Resource[];
+  starships: Resource[];
   created: Date;
   edited: Date;
-  url: LinkStyle;
+  url: string;
+  imageUrl: string;
 }

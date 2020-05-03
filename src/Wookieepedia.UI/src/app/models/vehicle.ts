@@ -1,4 +1,4 @@
-import { Card } from './card';
+import { Resource } from './resource';
 
 export interface Vehicle {
   name: string;
@@ -12,6 +12,8 @@ export interface Vehicle {
   max_atmosphering_speed: string;
   cargo_capacity: string;
   consumables: string;
-  films: Card[];
-  pilots: Card[];  
+  films: Resource[];
+  pilots: Resource[];
+  url: string;
+  imageUrl: string; 
 }

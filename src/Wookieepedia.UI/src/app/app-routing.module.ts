@@ -6,13 +6,13 @@ import { HomeComponent } from './home/home.component';
 
 import { SearchComponent } from './search/search.component';
 
-import { ResoursesComponent } from './resourses/resourses.component'
-import { PeopleComponent } from './resourses/people/people.component';
-import { PlanetsComponent } from './resourses/planets/planets.component';
-import { FilmsComponent } from './resourses/films/films.component';
-import { SpeciesComponent } from './resourses/species/species.component';
-import { VehiclesComponent } from './resourses/vehicles/vehicles.component';
-import { StarshipsComponent } from './resourses/starships/starships.component';
+import { ResourcesComponent } from './resources/resources.component'
+import { PeopleComponent } from './resources/people/people.component';
+import { PlanetsComponent } from './resources/planets/planets.component';
+import { FilmsComponent } from './resources/films/films.component';
+import { SpeciesComponent } from './resources/species/species.component';
+import { VehiclesComponent } from './resources/vehicles/vehicles.component';
+import { StarshipsComponent } from './resources/starships/starships.component';
 
 
 const routes: Routes = [
@@ -28,31 +28,31 @@ const routes: Routes = [
       component: HomeComponent
     },
     {
-      path: 'resourses',
-      component: ResoursesComponent,
+      path: 'resources',
+      component: ResourcesComponent,
       children: [
         {
-          path: 'people',
+          path: 'people/:id',
           component: PeopleComponent
         },
         {
-          path: 'planets',
+          path: 'planets/:id',
           component: PlanetsComponent
         },
         {
-          path: 'films',
+          path: 'films/:id',
           component: FilmsComponent
         },
         {
-          path: 'species',
+          path: 'species/:id',
           component: SpeciesComponent
         },
         {
-          path: 'vehicles',
+          path: 'vehicles/:id',
           component: VehiclesComponent
         },
         {
-          path: 'starships',
+          path: 'starships/:id',
           component: StarshipsComponent
         },
       ]
@@ -60,7 +60,7 @@ const routes: Routes = [
     },
     {
       path: 'search',
-      component: SearchComponent
+      component: SearchComponent      
     }]
   }
 

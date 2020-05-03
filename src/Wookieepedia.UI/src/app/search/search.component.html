@@ -1,19 +1,38 @@
-<section class="main">
-  <h2 class="main__title"></h2>
-  <input class="input" type="text" placeholder="Search...">
+<app-loading *ngIf="loading"></app-loading>
+<section class="section-content">
+  <h1>SEARCH</h1>
+  <form #f="ngForm" novalidate>
+    <div class="search-input">
+      <i>
+        <fa-icon [icon]="faSearch"></fa-icon>
+      </i>
+      <input [(ngModel)]="filter" type="search" placeholder="Search..." name="filter" (change)="onSearch()" />
+    </div>
+    <h3>Filter by</h3>
+    <div class="filter">
+      <span>Categories:</span>
+      <ng-multiselect-dropdown name="dropdownCategories" class="categories"
+                               [placeholder]="'- Select -'"
+                               [settings]="dropdownSettings"
+                               [data]="dropdownCategories"
+                               [(ngModel)]="selectedCategories"
+                               (onSelect)="onSearch()"
+                               (onDeSelect)="onSearch()">
+      </ng-multiselect-dropdown>
+      <span>Years:</span>
+      <ng-multiselect-dropdown name="dropdownYears" class="year" [placeholder]="'- Select -'"
+                               [settings]="dropdownSettings"
+                               [data]="dropdownYears"
+                               [(ngModel)]="selectedYears"
+                               [ngModelOptions]="{standalone: true}"
+                               (onSelect)="onSearch()"
+                               (onDeSelect)="onSearch()">
+      </ng-multiselect-dropdown>
+    </div>
+  </form>
 </section>
-<section>
-  <div class="wrap">
-    <h2 class="main__title">SEARCH RESULTS</h2>
-    <p>Filter by:</p>
-    <p>Categorias: <input list="colores" name="colores" type="text" placeholder="Elige un color">  </p>
-    <datalist id="colores">
-      <option value="Movies"></option>
-      <option value="Characters"></option>
-      <option value="Planets"></option>
-      <option value="Species"></option>
-      <option value="Starships"></option>
-      <option value="Vehicles"></option>
-    </datalist>
-  </div>
+<section id="results" class="section-content {{searched ? 'show' : 'hide'}}">
+  <h2>RESULTS</h2>
+  <i *ngIf="resources.length == 0">Not found...</i>
+  <app-resource *ngFor="let resource of resources;" [resource]="resource"></app-resource>
 </section>

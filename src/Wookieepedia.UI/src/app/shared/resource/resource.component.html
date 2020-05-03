@@ -1,0 +1,13 @@
+<app-loading *ngIf="loading"></app-loading>
+<h3>{{resource.resourceType}} ({{resource.count}})</h3>
+<div class="cards-container" style="grid-template-rows: repeat({{resource.count < 5 ? 1 : Math.floor(resource.count / 5)}}, 300px);">
+  <a *ngFor="let card of resource.results;" href="{{card.url}}">
+    <div style="background-image:url('{{card.imageUrl}}')"></div>
+  </a>
+</div>
+<div *ngIf="resource.previous || resource.next" class="center">
+  <span *ngIf="resource.previous" class="active" (click)="getResource(resource.previous)">< Prev</span>
+  <span>Page {{resource.page}}</span>
+  <span *ngIf="resource.next" class="active" (click)="getResource(resource.next)">Next ></span>
+</div>
+

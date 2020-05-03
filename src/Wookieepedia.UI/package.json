@@ -28,6 +28,7 @@
     "bootstrap": "^4.4.1",
     "font-awesome": "^4.7.0",
     "gsap": "^3.2.6",
+    "ng-multiselect-dropdown": "^0.2.10",
     "rxjs": "^6.5.5",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

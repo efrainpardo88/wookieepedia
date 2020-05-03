@@ -1,31 +1,26 @@
 import { Injectable } from '@angular/core';
-import {HttpHeaders, HttpCliente} from '@angular/common/http';
+import {HttpHeaders, HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import{Starships} from '../models/starships';
+import{Starship} from '../models/starship';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StarshipsService {
 
-  private baseur1 = 'http://swapi.py4e.com/api/';
-  httpOptions ={
-    headers: new HttpHeaders({'content.Type':'aplication/jason', 'Acces-Control-Allow-Origin': '*' })
+  private baseurl = 'http://swapi.py4e.com/api/';  // URL to web api
+
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' })
   };
 
-  constructor( 
-    private http: HttpClient,
+  constructor(
+    private http: HttpClient
+
   ) { }
-  getStarshipsById(id: string): Observable<Species> {
-    return this.http.get<species>(this.baseur1 + '/people/' + id + '/?format=jason' )}
 
-    getStarships (){
+  getStarshipById(id: string): Observable<Starship> {
+    return this.http.get<Starship>(this.baseurl + '/starship/' + id + '/?format=json');
+  }
 
-    }
-    getStarshipsByFilter (filter: string){
-
-    }
-    getStarshipsByUrlEndpoint (url: string){
-      
-    }
 }

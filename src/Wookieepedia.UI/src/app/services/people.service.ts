@@ -19,7 +19,8 @@ export class PeopleService {
 
   ) { }
 
-  getCharacterById(id: string): Observable<People> {
-    return this.http.get<People>(this.baseurl + '/people/' + id + '/?format=json');
+  getPeopleById(id: string): Observable<People> {
+    return this.http.get<People>(this.baseurl + '/people/' + id + '/?&format=json');
   }
+
 }
