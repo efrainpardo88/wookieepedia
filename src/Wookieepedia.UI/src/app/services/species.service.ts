@@ -20,7 +20,7 @@ export class SpeciesService {
   ) { }
 
   getSpeciesById(id: string): Observable<Species> {
-    return this.http.get<Species>(this.baseurl + '/species/' + id + '/?format=json');
+    return this.http.get<Species>(this.baseurl + 'species/' + id + '/?format=json');
   }
 
 }

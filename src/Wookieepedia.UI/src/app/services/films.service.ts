@@ -17,7 +17,7 @@ export class FilmsService {
   constructor(private http: HttpClient,) { }
 
   getFilmById(id: string): Observable<Film> {
-    return this.http.get<Film>(this.baseurl + '/films/' + id + '/?&format=json')
+    return this.http.get<Film>(this.baseurl + 'films/' + id + '/?&format=json')
   }
 }
 

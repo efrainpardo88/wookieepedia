@@ -1,17 +1,21 @@
 import { Resource } from './resource';
 
 export interface Starship {
-  title: string;
-  episode_id: number;
-  opening_crawl: string;
-  director: string;
-  producer: string;
-  release_date: Date;
-  species: Resource[];
-  starships: Resource[];
-  vehicles: Resource[];
-  people: Resource[];
-  planets: Resource[];
+  name: string;
+  model: number;
+  manufacturer: string;
+  cost_in_credits: string;
+  length: string;
+  max_atmosphering_speed: string;
+  crew: string;
+  passengers: string;
+  cargo_capacity: string;
+  consumables: string;
+  hyperdrive_rating: string;
+  MGLT: string;
+  starship_class: string;
+  pilots: Resource[];
+  films: Resource[];
   url: string;
   imageUrl: string;
 }

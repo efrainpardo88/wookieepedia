@@ -25,7 +25,7 @@ export class StarshipsComponent implements OnInit {
     this.loading = true;
     this.route.params.subscribe(params => {
       this.service.getStarshipById(params.id).subscribe(data => {
-        this.titleService.setTitle(data.title + ' | Wookieepedia');
+        this.titleService.setTitle(data.name + ' | Wookieepedia');
         this.resource = this.cards.getResourceWithCards(data);
         this.loading = false;
       });

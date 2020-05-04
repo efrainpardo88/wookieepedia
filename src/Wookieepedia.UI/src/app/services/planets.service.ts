@@ -20,7 +20,7 @@ export class PlanetsService {
   ) { }
 
   getPlanetById(id: string): Observable<Planet> {
-    return this.http.get<Planet>(this.baseurl + '/planet/' + id + '/?format=json');
+    return this.http.get<Planet>(this.baseurl + 'planets/' + id + '/?format=json');
   }
 
 }

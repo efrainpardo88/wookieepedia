@@ -186,6 +186,7 @@ section {
 }
 
 .img-description {
-  width: 200px;
+  width: 250px;
   height: auto;
+  padding: 20px 20px 20px 0;
 }

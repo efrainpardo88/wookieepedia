@@ -20,7 +20,7 @@ export class VehiclesService {
   ) { }
 
   getVehicleById(id: string): Observable<Vehicle> {
-    return this.http.get<Vehicle>(this.baseurl + '/vehicle/' + id + '/?format=json');
+    return this.http.get<Vehicle>(this.baseurl + 'vehicles/' + id + '/?format=json');
   }
 
 }

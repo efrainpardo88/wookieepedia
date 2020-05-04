@@ -1,29 +1,37 @@
 <app-loading *ngIf="loading"></app-loading>
 <section class="section-content" *ngIf="resource">
-  <h1>{{resource.title}}</h1>
+  <h1>{{resource.name}}</h1>
   <div class="row">
     <div class="col-sm">
       <img class="img-description" src="{{resource.imageUrl}}" alt="{{resource.name}}" />
     </div>
     <div class="col-sm">
-      <h3>EPISODE ID:</h3>
-      <p>{{resource.episode_id}}</p>
-      <h3>OPENING CRAWL:</h3>
-      <p>{{resource.opening_crawl}}</p>
-      <h3>DIRECTOR:</h3>
-      <p>{{resource.director}}</p>
-      <h3>PRODUCER:</h3>
-      <p>{{resource.producer}}</p>
+      <h3>MODEL:</h3>
+      <p>{{resource.model}}</p>
+      <h3>MANUFACTURER:</h3>
+      <p>{{resource.manufacturer}}</p>
+      <h3>COST IN CREDITS:</h3>
+      <p>{{resource.cost_in_credits}}</p>
+      <h3>LENGTH:</h3>
+      <p>{{resource.length}}</p>
+      <h3>CONSUMABLES:</h3>
+      <p>{{resource.consumables}}</p>
+      <h3>STARSHIP CLASS:</h3>
+      <p>{{resource.starship_class}}</p>
     </div>
     <div class="col-sm">
-      <h3>RELEASE DATE:</h3>
-      <p>{{resource.release_date}}</p>
+      <h3>MAX ATMOSPHERING SPEED:</h3>
+      <p>{{resource.max_atmosphering_speed}}</p>
+      <h3>CREW:</h3>
+      <p>{{resource.crew}}</p>
+      <h3>PASSENGERS:</h3>
+      <p>{{resource.passengers}}</p>
+      <h3>CARGO CAPACITY:</h3>
+      <p>{{resource.cargo_capacity}}</p>
+      <h3>HYPERDRIVE RATINGE:</h3>
+      <p>{{resource.hyperdrive_rating}}</p>
     </div>
   </div>
     <app-resource [resource]="resource.films"></app-resource>
-    <app-resource [resource]="resource.species"></app-resource>
-    <app-resource [resource]="resource.vehicles"></app-resource>
-    <app-resource [resource]="resource.starships"></app-resource>
-    <app-resource [resource]="resource.people"></app-resource>
-    <app-resource [resource]="resource.planets"></app-resource>
+    <app-resource [resource]="resource.pilots"></app-resource>
 </section>
