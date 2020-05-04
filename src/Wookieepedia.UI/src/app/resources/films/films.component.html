@@ -1,35 +1,28 @@
-<section id="movies">
-    <div class="movies-header">
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
+<app-loading *ngIf="loading"></app-loading>
+<section class="section-content" *ngIf="resource">
+  <h1>{{resource.title}}</h1>
+  <div class="row">
+    <div class="col-sm">
+      <img class="img-description" src="{{resource.imageUrl}}" alt="{{resource.title}}" />
     </div>
-    <h2>MOVIES</h2>
-    <h3 class="center">look all the information the Star Wars</h3>
-    <div class="center">
-      <img src="/assets/images/categories/movies/episodio1.png" alt="episodio1 Star Wars" title="La amenaza fantasma" class="episodios" />
-      <img src="/assets/images/categories/movies/episodio2.png" alt="episodio2 Star Wars" title="El ataque de los clones" class="episodios" />
-      <img src="/assets/images/categories/movies/episodio3.png" alt="episodio3 Star Wars" title="La venganza de los Sith" class="episodios" />
-      <img src="/assets/images/categories/movies/episodio4.png" alt="episodio4 Star Wars" title="Una nueva esperanza" class="episodios" />
-      <img src="/assets/images/categories/movies/episodio5.png" alt="episodio5 Star Wars" title="El Imperio contraataca" class="episodios" />
-      <br>
-      <img src="/assets/images/categories/movies/episodio6.png" alt="episodio6 Star Wars" title="El retorno del Jedi" class="episodios" />
-      <img src="/assets/images/categories/movies/episodio7.png" alt="episodio7 Star Wars" title="El despertar de la Fuerza" class="episodios" />
-      <img src="/assets/images/categories/movies/episodio8.png" alt="episodio8 Star Wars" title="Los últimos Jedi" class="episodios" />
-      <img src="/assets/images/categories/movies/episodio9.png" alt="episodio9 Star Wars" title="El ascenso de Skywalker" class="episodios" />
-      <img src="/assets/images/categories/movies/episodio10.png" alt="episodio10 Star Wars" title="Han solo" class="episodios" />
+    <div class="col-sm">
+      <h3>EPISODE ID:</h3>
+      <p>{{resource.episode_id}}</p>
+      <h3>DIRECTOR:</h3>
+      <p>{{resource.director}}</p>
+      <h3>PRODUCER:</h3>
+      <p>{{resource.producer}}</p>
     </div>
-    <br><br>
-    <div class="center">
-      <a href="/search?category=movies" class="button">SEARCH</a>
+    <div class="col-sm">
+      <h3>RELEASE DATE:</h3>
+      <p>{{resource.release_date}}</p>
     </div>
-  </section>
-  <section id="in-a-galaxy">
-    <div class="two-column">
-      <div class="section-content">
-        <h2>IN A GALAXY</h2>
-        <h3>Find all the information about your favorite saga, characters, vehicles, tarships, planets and teh different races that habit the Star Wars Universe</h3>
-      </div>
-    </div>
-
-  </section>
+  </div>
+  <h3>OPENING CRAWL:</h3>
+  <p>{{resource.opening_crawl}}</p>
+  <app-resource [resource]="resource.species"></app-resource>
+  <app-resource [resource]="resource.starships"></app-resource>
+  <app-resource [resource]="resource.vehicles"></app-resource>
+  <app-resource [resource]="resource.characters"></app-resource>
+  <app-resource [resource]="resource.planets"></app-resource>
+</section>

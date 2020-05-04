@@ -1,7 +1,7 @@
 import { Card } from './card';
 
 export interface Resource {
-  count: string;
+  count: number;
   next: string;
   previous: string;
   results: Card[];

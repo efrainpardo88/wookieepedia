@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { CardsService } from 'src/app/services/cards.service';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
@@ -25,6 +26,7 @@ export class SearchComponent implements OnInit {
 
   constructor(
     private titleService: Title,
+    private route: ActivatedRoute,
     private service: ResourcesService,
     private cards: CardsService
   ) {
@@ -56,6 +58,13 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.titleService.setTitle('Search | Wookieepedia');
+    this.route.queryParams.subscribe(params => {
+      const categories = params.category ? params.category.split(",") : [];
+      const filter = params.filter;
+      this.selectedCategories = this.dropdownCategories.filter(x => categories.includes(x.id));
+      this.filter = filter;
+      this.onSearch();
+    });
   }
 
   onSearch() {
@@ -87,13 +96,19 @@ export class SearchComponent implements OnInit {
           })
         })
       }
+      else
+        this.loading = false;
     }
   }
 
   setResource(resource: Resource, info) {
     resource.results = this.cards.getResourceAsCard(resource.results);
     resource.resourceType = info.name;
-    resource.page = resource.next ? (parseInt(resource.next.split("&")[0].slice(-1)) - 1).toString() : "";
+    if (resource.next || resource.previous) {
+      resource.page = resource.next ?
+        (parseInt(resource.next.split("page")[1].slice(1, 2)) - 1).toString() :
+        (parseInt(resource.previous.split("page")[1].slice(1, 2)) - 1).toString();
+    }
     this.resources.push(resource);
 
     if (!this.searched)

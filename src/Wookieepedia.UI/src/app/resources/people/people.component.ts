@@ -13,7 +13,6 @@ import { People } from '../../models/people';
 export class PeopleComponent implements OnInit {
 
   resource: People;
-  resourceImage: string;
   loading = false;
 
   constructor(

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -8,7 +9,9 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
     window.addEventListener('scroll', this.scroll, true); //third parameter
@@ -30,4 +33,8 @@ export class HeaderComponent implements OnInit {
   };
 
   faSearch = faSearch;
+
+  search(event) {
+    this.router.navigate(["/search"], { queryParams: { filter: event.target.value } });
+  }
 }

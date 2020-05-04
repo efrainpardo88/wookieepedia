@@ -1,5 +1,7 @@
-h3 {
-  margin-top: 100px;
+.resource-container {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    margin-bottom: 50px;
 }
 
 .cards-container {
@@ -24,6 +26,21 @@ h3 {
       transition: all 0.3s;
     }
 
+    span {
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      display: block;
+      width: 100%;
+      font-family: 'DIN Neuzeit Grotesk';
+      font-size: 16px;
+      text-align: center;
+      color: #fff;
+      text-shadow: 0px 0px 5px rgba(0,0,0,1);
+    }
+
     &::after {
       position: absolute;
       top: 0;
@@ -38,6 +55,7 @@ h3 {
       background: rgba(0, 0, 0, 0.3);
       opacity: 0;
       transition: all 0.3s;
+      cursor:pointer;
     }
 
     &:hover {

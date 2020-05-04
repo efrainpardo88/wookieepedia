@@ -34,5 +34,7 @@
 <section id="results" class="section-content {{searched ? 'show' : 'hide'}}">
   <h2>RESULTS</h2>
   <i *ngIf="resources.length == 0">Not found...</i>
-  <app-resource *ngFor="let resource of resources;" [resource]="resource"></app-resource>
+  <ng-container *ngFor="let resource of resources;">
+    <app-resource [resource]="resource" *ngIf="resource.count > 0"></app-resource>
+  </ng-container>
 </section>

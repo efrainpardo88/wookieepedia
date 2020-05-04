@@ -1,11 +1,11 @@
 <div class="two-column">
   <div class="section-content">
-    <a href="/search?category=characters"><h2>CHARACTERS</h2></a>
-    <a href="/search?category=planets"><h2>PLANETS</h2></a>
-    <a href="/search?category=species"><h2>SPECIES</h2></a>
-    <a href="/search?category=starships"><h2>STARSHIPS</h2></a>
-    <a href="/search?category=vehicles"><h2>VEHICLES</h2></a>
-    <div class="center"><a class="button" href="/search">SEARCH</a></div>
+    <a [routerLink]="['/search']" [queryParams]="{category: 'people'}"><h2>CHARACTERS</h2></a>
+    <a [routerLink]="['/search']" [queryParams]="{category: 'planets'}"><h2>PLANETS</h2></a>
+    <a [routerLink]="['/search']" [queryParams]="{category: 'species'}"><h2>SPECIES</h2></a>
+    <a [routerLink]="['/search']" [queryParams]="{category: 'starships'}"><h2>STARSHIPS</h2></a>
+    <a [routerLink]="['/search']" [queryParams]="{category: 'vehicles'}"><h2>VEHICLES</h2></a>
+    <div class="center"><a class="button" [routerLink]="['/search']">SEARCH</a></div>
   </div>
   <img src="/assets/images/star-wars.png" alt="Star Wars" />
 </div>

@@ -9,295 +9,1086 @@ export class CardsService {
 
   constructor() {
     this.resourceMap = {
-      "films": {
-        "1": "a-new-hope.jpg",
-        "2": "the-empire-strikes-back.jpg",
-        "3": "return-of-the-jedi.jpg",
-        "4": "the-phantom-menace.jpg",
-        "5": "attack-of-the-clones.jpg",
-        "6": "revenge-of-the-sith.jpg",
-        "7": "the-force-awakens.jpg"
-      },
-      "people": {
-        "1": "luke-skywalker.jpg",
-        "2": "c-3po.jpg",
-        "3": "r2-d2.jpg",
-        "4": "darth-vader.jpg",
-        "5": "leia-organa.jpg",
-        "6": "owen-lars.jpg",
-        "7": "beru-whitesun-lars.jpg",
-        "8": "r5-d4.jpg",
-        "9": "biggs-darklighter.jpg",
-        "10": "obi-wan-kenobi.jpg",
-        "11": "anakin-skywalker.jpg",
-        "12": "wilhuff-tarkin.jpg",
-        "13": "chewbacca.jpg",
-        "14": "han-solo.jpg",
-        "15": "greedo.jpg",
-        "16": "jabba-desilijic-tiure.jpg",
-        "17": "wedge-antilles.jpg",
-        "18": "jek-tono-porkins.jpg",
-        "19": "yoda.jpg",
-        "20": "palpatine.jpg",
-        "21": "boba-fett.jpg",
-        "22": "ig-88.jpg",
-        "23": "bossk.jpg",
-        "24": "lando-calrissian.jpg",
-        "25": "lobot.jpg",
-        "26": "ackbar.jpg",
-        "27": "mon-mothma.jpg",
-        "28": "arvel-crynyd.jpg",
-        "29": "wicket-systri-warrick.jpg",
-        "30": "nien-nunb.jpg",
-        "31": "qui-gon-jinn.jpg",
-        "32": "nute-gunray.jpg",
-        "33": "finis-valorum.jpg",
-        "34": "padmé-amidala.jpg",
-        "35": "jar-jar-binks.jpg",
-        "36": "roos-tarpals.jpg",
-        "37": "rugor-nass.jpg",
-        "38": "ric-olié.jpg",
-        "39": "watto.jpg",
-        "40": "sebulba.jpg",
-        "41": "quarsh-panaka.jpg",
-        "42": "shmi-skywalker.jpg",
-        "43": "darth-maul.jpg",
-        "44": "bib-fortuna.jpg",
-        "45": "ayla-secura.jpg",
-        "46": "ratts-tyerel.jpg",
-        "47": "dud-bolt.jpg",
-        "48": "gasgano.jpg",
-        "49": "ben-quadinaros.jpg",
-        "50": "mace-windu.jpg",
-        "51": "ki-adi-mundi.jpg",
-        "52": "kit-fisto.jpg",
-        "53": "eeth-koth.jpg",
-        "54": "adi-gallia.jpg",
-        "55": "saesee-tiin.jpg",
-        "56": "yarael-poof.jpg",
-        "57": "plo-koon.jpg",
-        "58": "mas-amedda.jpg",
-        "59": "gregar-typho.jpg",
-        "60": "cordé.jpg",
-        "61": "cliegg-lars.jpg",
-        "62": "poggle-the-lesser.jpg",
-        "63": "luminara-unduli.jpg",
-        "64": "barriss-offee.jpg",
-        "65": "dormé.jpg",
-        "66": "dooku.jpg",
-        "67": "bail-prestor-organa.jpg",
-        "68": "jango-fett.jpg",
-        "69": "zam-wesell.jpg",
-        "70": "dexter-jettster.jpg",
-        "71": "lama-su.jpg",
-        "72": "taun-we.jpg",
-        "73": "jocasta-nu.jpg",
-        "74": "r4-p17.jpg",
-        "75": "wat-tambor.jpg",
-        "76": "san-hill.jpg",
-        "77": "shaak-ti.jpg",
-        "78": "grievous.jpg",
-        "79": "tarfful.jpg",
-        "80": "raymus-antilles.jpg",
-        "81": "sly-moore.jpg",
-        "82": "tion-medon.jpg",
-        "83": "finn.jpg",
-        "84": "rey.jpg",
-        "85": "poe-dameron.jpg",
-        "86": "bb8.jpg",
-        "87": "captain-phasma.jpg"
-      },
-      "planets": {
-        "1": "tatooine.jpg",
-        "2": "alderaan.jpg",
-        "3": "yavin-iv.jpg",
-        "4": "hoth.jpg",
-        "5": "dagobah.jpg",
-        "6": "bespin.jpg",
-        "7": "endor.jpg",
-        "8": "naboo.jpg",
-        "9": "coruscant.jpg",
-        "10": "kamino.jpg",
-        "11": "geonosis.jpg",
-        "12": "utapau.jpg",
-        "13": "mustafar.jpg",
-        "14": "kashyyyk.jpg",
-        "15": "polis-massa.jpg",
-        "16": "mygeeto.jpg",
-        "17": "felucia.jpg",
-        "18": "cato-neimoidia.jpg",
-        "19": "saleucami.jpg",
-        "20": "stewjon.jpg",
-        "21": "eriadu.jpg",
-        "22": "corellia.jpg",
-        "23": "rodia.jpg",
-        "24": "nal-hutta.jpg",
-        "25": "dantooine.jpg",
-        "26": "bestine-iv.jpg",
-        "27": "ord-mantell.jpg",
-        "28": "unknown.jpg",
-        "29": "trandosha.jpg",
-        "30": "socorro.jpg",
-        "31": "mon-cala.jpg",
-        "32": "chandrila.jpg",
-        "33": "sullust.jpg",
-        "34": "toydaria.jpg",
-        "35": "malastare.jpg",
-        "36": "dathomir.jpg",
-        "37": "ryloth.jpg",
-        "38": "aleen-minor.jpg",
-        "39": "vulpter.jpg",
-        "40": "troiken.jpg",
-        "41": "mon-cala.jpg",
-        "42": "chandrila.jpg",
-        "43": "sullust.jpg",
-        "44": "toydaria.jpg",
-        "45": "malastare.jpg",
-        "46": "dathomir.jpg",
-        "47": "ryloth.jpg",
-        "48": "aleen-minor.jpg",
-        "49": "vulpter.jpg",
-        "50": "troiken.jpg",
-        "51": "tund.jpg",
-        "52": "haruun-kal.jpg",
-        "53": "cerea.jpg",
-        "54": "glee-anselm.jpg",
-        "55": "iridonia.jpg",
-        "56": "tholoth.jpg",
-        "57": "iktotch.jpg",
-        "58": "quermia.jpg",
-        "59": "dorin.jpg",
-        "60": "champala.jpg",
-        "61": "mirial.jpg",
-        "62": "serenno.jpg",
-        "63": "concord-dawn.jpg",
-        "64": "zolan.jpg",
-        "65": "ojom.jpg",
-        "66": "skako.jpg",
-        "67": "muunilinst.jpg",
-        "68": "shili.jpg",
-        "69": "kalee.jpg",
-        "70": "umbara.jpg",
-        "71": "jakku.jpg"
-      },
-      "species": {
-        "1": "human.jpg",
-        "2": "droid.jpg",
-        "3": "wookiee.jpg",
-        "4": "rodian.jpg",
-        "5": "hutt.jpg",
-        "6": "yodas-species.jpg",
-        "7": "trandoshan.jpg",
-        "8": "mon-calamari.jpg",
-        "9": "ewok.jpg",
-        "10": "sullustan.jpg",
-        "11": "neimodian.jpg",
-        "12": "gungan.jpg",
-        "13": "toydarian.jpg",
-        "14": "dug.jpg",
-        "15": "twilek.jpg",
-        "16": "aleena.jpg",
-        "17": "vulptereen.jpg",
-        "18": "xexto.jpg",
-        "19": "toong.jpg",
-        "20": "cerean.jpg",
-        "21": "nautolan.jpg",
-        "22": "zabrak.jpg",
-        "23": "tholothian.jpg",
-        "24": "iktotchi.jpg",
-        "25": "quermian.jpg",
-        "26": "kel-dor.jpg",
-        "27": "chagrian.jpg",
-        "28": "geonosian.jpg",
-        "29": "mirialan.jpg",
-        "30": "clawdite.jpg",
-        "31": "besalisk.jpg",
-        "32": "kaminoan.jpg",
-        "33": "skakoan.jpg",
-        "34": "muun.jpg",
-        "35": "togruta.jpg",
-        "36": "kaleesh.jpg",
-        "37": "pauan.jpg"
-      },
-      "starships": {
-        "1": "cr90-corvette.jpg",
-        "2": "star-destroyer.jpg",
-        "3": "sentinel-class-landing-craft.jpg",
-        "4": "death-star.jpg",
-        "5": "millennium-falcon.jpg",
-        "6": "y-wing.jpg",
-        "7": "x-wing.jpg",
-        "8": "tie-advanced-x1.jpg",
-        "9": "executor.jpg",
-        "10": "rebel-transport.jpg",
-        "11": "slave-1.jpg",
-        "12": "imperial-shuttle.jpg",
-        "13": "ef76-nebulon-b-escort-frigate.jpg",
-        "14": "calamari-cruiser.jpg",
-        "15": "a-wing.jpg",
-        "16": "b-wing.jpg",
-        "17": "republic-cruiser.jpg",
-        "18": "droid-control-ship.jpg",
-        "19": "naboo-fighter.jpg",
-        "20": "naboo-royal-starship.jpg",
-        "21": "scimitar.jpg",
-        "22": "j-type-diplomatic-barge.jpg",
-        "23": "aa-9-coruscant-freighter.jpg",
-        "24": "jedi-starfighter.jpg",
-        "25": "h-type-nubian-yacht.jpg",
-        "26": "republic-assault-ship.jpg",
-        "27": "solar-sailer.jpg",
-        "28": "trade-federation-cruiser.jpg",
-        "29": "theta-class-t-2c-shuttle.jpg",
-        "30": "republic-attack-cruiser.jpg",
-        "31": "naboo-star-skiff.jpg",
-        "32": "jedi-interceptor.jpg",
-        "33": "arc-170.jpg",
-        "34": "banking-clan-frigte.jpg",
-        "35": "belbullab-22-starfighter.jpg",
-        "36": "v-wing.jpg"
-      },
-      "vehicles": {
-        "1": "sand-crawler.jpg",
-        "2": "t-16-skyhopper.jpg",
-        "3": "x-34-landspeeder.jpg",
-        "4": "tie/ln-starfighter.jpg",
-        "5": "snowspeeder.jpg",
-        "6": "tie-bomber.jpg",
-        "7": "at-at.jpg",
-        "8": "at-st.jpg",
-        "9": "storm-iv-twin-pod-cloud-car.jpg",
-        "10": "sail-barge.jpg",
-        "11": "bantha-ii-cargo-skiff.jpg",
-        "12": "tie/in-interceptor.jpg",
-        "13": "imperial-speeder-bike.jpg",
-        "14": "vulture-droid.jpg",
-        "15": "multi-troop-transport.jpg",
-        "16": "armored-assault-tank.jpg",
-        "17": "single-trooper-aerial-platform.jpg",
-        "18": "c-9979-landing-craft.jpg",
-        "19": "tribubble-bongo.jpg",
-        "20": "sith-speeder.jpg",
-        "21": "zephyr-g-swoop-bike.jpg",
-        "22": "koro-2-exodrive-airspeeder.jpg",
-        "23": "xj-6-airspeeder.jpg",
-        "24": "laat/i.jpg",
-        "25": "laat/c.jpg",
-        "26": "at-te.jpg",
-        "27": "spha.jpg",
-        "28": "flitknot-speeder.jpg",
-        "29": "neimoidian-shuttle.jpg",
-        "30": "geonosian-starfighter.jpg",
-        "31": "tsmeu-6-personal-wheel-bike.jpg",
-        "32": "emergency-firespeeder.jpg",
-        "33": "droid-tri-fighter.jpg",
-        "34": "oevvaor-jet-catamaran.jpg",
-        "35": "raddaugh-gnasp-fluttercraft.jpg",
-        "36": "clone-turbo-tank.jpg",
-        "37": "corporate-alliance-tank-droid.jpg",
-        "38": "droid-gunship.jpg",
-        "39": "at-rt.jpg"
-      }
+      "films": [
+        {
+          "id": "1",
+          "name": "A New Hope"
+        },
+        {
+          "id": "2",
+          "name": "The Empire Strikes Back"
+        },
+        {
+          "id": "3",
+          "name": "Return of the Jedi"
+        },
+        {
+          "id": "4",
+          "name": "The Phantom Menace"
+        },
+        {
+          "id": "5",
+          "name": "Attack of the Clones"
+        },
+        {
+          "id": "6",
+          "name": "Revenge of the Sith"
+        },
+        {
+          "id": "7",
+          "name": "The Force Awakens"
+        }
+      ],
+      "people": [
+        {
+          "id": "1",
+          "name": "Luke Skywalker"
+        },
+        {
+          "id": "2",
+          "name": "C-3PO"
+        },
+        {
+          "id": "3",
+          "name": "R2-D2"
+        },
+        {
+          "id": "4",
+          "name": "Darth Vader"
+        },
+        {
+          "id": "5",
+          "name": "Leia Organa"
+        },
+        {
+          "id": "6",
+          "name": "Owen Lars"
+        },
+        {
+          "id": "7",
+          "name": "Beru Whitesun lars"
+        },
+        {
+          "id": "8",
+          "name": "R5-D4"
+        },
+        {
+          "id": "9",
+          "name": "Biggs Darklighter"
+        },
+        {
+          "id": "10",
+          "name": "Obi-Wan Kenobi"
+        },
+        {
+          "id": "11",
+          "name": "Anakin Skywalker"
+        },
+        {
+          "id": "12",
+          "name": "Wilhuff Tarkin"
+        },
+        {
+          "id": "13",
+          "name": "Chewbacca"
+        },
+        {
+          "id": "14",
+          "name": "Han Solo"
+        },
+        {
+          "id": "15",
+          "name": "Greedo"
+        },
+        {
+          "id": "16",
+          "name": "Jabba Desilijic Tiure"
+        },
+        {
+          "id": "18",
+          "name": "Wedge Antilles"
+        },
+        {
+          "id": "19",
+          "name": "Jek Tono Porkins"
+        },
+        {
+          "id": "20",
+          "name": "Yoda"
+        },
+        {
+          "id": "21",
+          "name": "Palpatine"
+        },
+        {
+          "id": "22",
+          "name": "Boba Fett"
+        },
+        {
+          "id": "23",
+          "name": "IG-88"
+        },
+        {
+          "id": "24",
+          "name": "Bossk"
+        },
+        {
+          "id": "25",
+          "name": "Lando Calrissian"
+        },
+        {
+          "id": "26",
+          "name": "Lobot"
+        },
+        {
+          "id": "27",
+          "name": "Ackbar"
+        },
+        {
+          "id": "28",
+          "name": "Mon Mothma"
+        },
+        {
+          "id": "29",
+          "name": "Arvel Crynyd"
+        },
+        {
+          "id": "30",
+          "name": "Wicket Systri Warrick"
+        },
+        {
+          "id": "31",
+          "name": "Nien Nunb"
+        },
+        {
+          "id": "32",
+          "name": "Qui-Gon Jinn"
+        },
+        {
+          "id": "33",
+          "name": "Nute Gunray"
+        },
+        {
+          "id": "34",
+          "name": "Finis Valorum"
+        },
+        {
+          "id": "35",
+          "name": "Padmé Amidala"
+        },
+        {
+          "id": "36",
+          "name": "Jar Jar Binks"
+        },
+        {
+          "id": "37",
+          "name": "Roos Tarpals"
+        },
+        {
+          "id": "38",
+          "name": "Rugor Nass"
+        },
+        {
+          "id": "39",
+          "name": "Ric Olié"
+        },
+        {
+          "id": "40",
+          "name": "Watto"
+        },
+        {
+          "id": "41",
+          "name": "Sebulba"
+        },
+        {
+          "id": "42",
+          "name": "Quarsh Panaka"
+        },
+        {
+          "id": "43",
+          "name": "Shmi Skywalker"
+        },
+        {
+          "id": "44",
+          "name": "Darth Maul"
+        },
+        {
+          "id": "45",
+          "name": "Bib Fortuna"
+        },
+        {
+          "id": "46",
+          "name": "Ayla Secura"
+        },
+        {
+          "id": "47",
+          "name": "Ratts Tyerel"
+        },
+        {
+          "id": "48",
+          "name": "Dud Bolt"
+        },
+        {
+          "id": "49",
+          "name": "Gasgano"
+        },
+        {
+          "id": "50",
+          "name": "Ben Quadinaros"
+        },
+        {
+          "id": "51",
+          "name": "Mace Windu"
+        },
+        {
+          "id": "52",
+          "name": "Ki-Adi-Mundi"
+        },
+        {
+          "id": "53",
+          "name": "Kit Fisto"
+        },
+        {
+          "id": "54",
+          "name": "Eeth Koth"
+        },
+        {
+          "id": "55",
+          "name": "Adi Gallia"
+        },
+        {
+          "id": "56",
+          "name": "Saesee Tiin"
+        },
+        {
+          "id": "57",
+          "name": "Yarael Poof"
+        },
+        {
+          "id": "58",
+          "name": "Plo Koon"
+        },
+        {
+          "id": "59",
+          "name": "Mas Amedda"
+        },
+        {
+          "id": "60",
+          "name": "Gregar Typho"
+        },
+        {
+          "id": "61",
+          "name": "Cordé"
+        },
+        {
+          "id": "62",
+          "name": "Cliegg Lars"
+        },
+        {
+          "id": "63",
+          "name": "Poggle the Lesser"
+        },
+        {
+          "id": "64",
+          "name": "Luminara Unduli"
+        },
+        {
+          "id": "65",
+          "name": "Barriss Offee"
+        },
+        {
+          "id": "66",
+          "name": "Dormé"
+        },
+        {
+          "id": "67",
+          "name": "Dooku"
+        },
+        {
+          "id": "68",
+          "name": "Bail Prestor Organa"
+        },
+        {
+          "id": "69",
+          "name": "Jango Fett"
+        },
+        {
+          "id": "70",
+          "name": "Zam Wesell"
+        },
+        {
+          "id": "71",
+          "name": "Dexter Jettster"
+        },
+        {
+          "id": "72",
+          "name": "Lama Su"
+        },
+        {
+          "id": "73",
+          "name": "Taun We"
+        },
+        {
+          "id": "74",
+          "name": "Jocasta Nu"
+        },
+        {
+          "id": "75",
+          "name": "R4-P17"
+        },
+        {
+          "id": "76",
+          "name": "Wat Tambor"
+        },
+        {
+          "id": "77",
+          "name": "San Hill"
+        },
+        {
+          "id": "78",
+          "name": "Shaak Ti"
+        },
+        {
+          "id": "79",
+          "name": "Grievous"
+        },
+        {
+          "id": "80",
+          "name": "Tarfful"
+        },
+        {
+          "id": "81",
+          "name": "Raymus Antilles"
+        },
+        {
+          "id": "82",
+          "name": "Sly Moore"
+        },
+        {
+          "id": "83",
+          "name": "Tion Medon"
+        },
+        {
+          "id": "84",
+          "name": "Finn"
+        },
+        {
+          "id": "85",
+          "name": "Rey"
+        },
+        {
+          "id": "86",
+          "name": "Poe Dameron"
+        },
+        {
+          "id": "87",
+          "name": "BB8"
+        },
+        {
+          "id": "88",
+          "name": "Captain Phasma"
+        }
+      ],
+      "planets": [
+        {
+          "id": "1",
+          "name": "Tatooine"
+        },
+        {
+          "id": "2",
+          "name": "Alderaan"
+        },
+        {
+          "id": "3",
+          "name": "Yavin IV"
+        },
+        {
+          "id": "4",
+          "name": "Hoth"
+        },
+        {
+          "id": "5",
+          "name": "Dagobah"
+        },
+        {
+          "id": "6",
+          "name": "Bespin"
+        },
+        {
+          "id": "7",
+          "name": "Endor"
+        },
+        {
+          "id": "8",
+          "name": "Naboo"
+        },
+        {
+          "id": "9",
+          "name": "Coruscant"
+        },
+        {
+          "id": "10",
+          "name": "Kamino"
+        },
+        {
+          "id": "11",
+          "name": "Geonosis"
+        },
+        {
+          "id": "12",
+          "name": "Utapau"
+        },
+        {
+          "id": "13",
+          "name": "Mustafar"
+        },
+        {
+          "id": "14",
+          "name": "Kashyyyk"
+        },
+        {
+          "id": "15",
+          "name": "Polis Massa"
+        },
+        {
+          "id": "16",
+          "name": "Mygeeto"
+        },
+        {
+          "id": "17",
+          "name": "Felucia"
+        },
+        {
+          "id": "18",
+          "name": "Cato Neimoidia"
+        },
+        {
+          "id": "19",
+          "name": "Saleucami"
+        },
+        {
+          "id": "20",
+          "name": "Stewjon"
+        },
+        {
+          "id": "21",
+          "name": "Eriadu"
+        },
+        {
+          "id": "22",
+          "name": "Corellia"
+        },
+        {
+          "id": "23",
+          "name": "Rodia"
+        },
+        {
+          "id": "24",
+          "name": "Nal Hutta"
+        },
+        {
+          "id": "25",
+          "name": "Dantooine"
+        },
+        {
+          "id": "26",
+          "name": "Bestine IV"
+        },
+        {
+          "id": "27",
+          "name": "Ord Mantell"
+        },
+        {
+          "id": "28",
+          "name": "unknown"
+        },
+        {
+          "id": "29",
+          "name": "Trandosha"
+        },
+        {
+          "id": "30",
+          "name": "Socorro"
+        },
+        {
+          "id": "31",
+          "name": "Mon Cala"
+        },
+        {
+          "id": "32",
+          "name": "Chandrila"
+        },
+        {
+          "id": "33",
+          "name": "Sullust"
+        },
+        {
+          "id": "34",
+          "name": "Toydaria"
+        },
+        {
+          "id": "35",
+          "name": "Malastare"
+        },
+        {
+          "id": "36",
+          "name": "Dathomir"
+        },
+        {
+          "id": "37",
+          "name": "Ryloth"
+        },
+        {
+          "id": "38",
+          "name": "Aleen Minor"
+        },
+        {
+          "id": "39",
+          "name": "Vulpter"
+        },
+        {
+          "id": "40",
+          "name": "Troiken"
+        },
+        {
+          "id": "41",
+          "name": "Tund"
+        },
+        {
+          "id": "42",
+          "name": "Haruun Kal"
+        },
+        {
+          "id": "43",
+          "name": "Cerea"
+        },
+        {
+          "id": "44",
+          "name": "Glee Anselm"
+        },
+        {
+          "id": "45",
+          "name": "Iridonia"
+        },
+        {
+          "id": "46",
+          "name": "Tholoth"
+        },
+        {
+          "id": "47",
+          "name": "Iktotch"
+        },
+        {
+          "id": "48",
+          "name": "Quermia"
+        },
+        {
+          "id": "49",
+          "name": "Dorin"
+        },
+        {
+          "id": "50",
+          "name": "Champala"
+        },
+        {
+          "id": "51",
+          "name": "Mirial"
+        },
+        {
+          "id": "52",
+          "name": "Serenno"
+        },
+        {
+          "id": "53",
+          "name": "Concord Dawn"
+        },
+        {
+          "id": "54",
+          "name": "Zolan"
+        },
+        {
+          "id": "55",
+          "name": "Ojom"
+        },
+        {
+          "id": "56",
+          "name": "Skako"
+        },
+        {
+          "id": "57",
+          "name": "Muunilinst"
+        },
+        {
+          "id": "58",
+          "name": "Shili"
+        },
+        {
+          "id": "59",
+          "name": "Kalee"
+        },
+        {
+          "id": "60",
+          "name": "Umbara"
+        },
+        {
+          "id": "61",
+          "name": "Jakku"
+        }
+      ],
+      "species": [
+        {
+          "id": "1",
+          "name": "Human"
+        },
+        {
+          "id": "2",
+          "name": "Droid"
+        },
+        {
+          "id": "3",
+          "name": "Wookiee"
+        },
+        {
+          "id": "4",
+          "name": "Rodian"
+        },
+        {
+          "id": "5",
+          "name": "Hutt"
+        },
+        {
+          "id": "6",
+          "name": "Yoda's species"
+        },
+        {
+          "id": "7",
+          "name": "Trandoshan"
+        },
+        {
+          "id": "8",
+          "name": "Mon Calamari"
+        },
+        {
+          "id": "9",
+          "name": "Ewok"
+        },
+        {
+          "id": "10",
+          "name": "Sullustan"
+        },
+        {
+          "id": "11",
+          "name": "Neimodian"
+        },
+        {
+          "id": "12",
+          "name": "Gungan"
+        },
+        {
+          "id": "13",
+          "name": "Toydarian"
+        },
+        {
+          "id": "14",
+          "name": "Dug"
+        },
+        {
+          "id": "15",
+          "name": "Twi'lek"
+        },
+        {
+          "id": "16",
+          "name": "Aleena"
+        },
+        {
+          "id": "17",
+          "name": "Vulptereen"
+        },
+        {
+          "id": "18",
+          "name": "Xexto"
+        },
+        {
+          "id": "19",
+          "name": "Toong"
+        },
+        {
+          "id": "20",
+          "name": "Cerean"
+        },
+        {
+          "id": "21",
+          "name": "Nautolan"
+        },
+        {
+          "id": "22",
+          "name": "Zabrak"
+        },
+        {
+          "id": "23",
+          "name": "Tholothian"
+        },
+        {
+          "id": "24",
+          "name": "Iktotchi"
+        },
+        {
+          "id": "25",
+          "name": "Quermian"
+        },
+        {
+          "id": "26",
+          "name": "Kel Dor"
+        },
+        {
+          "id": "27",
+          "name": "Chagrian"
+        },
+        {
+          "id": "28",
+          "name": "Geonosian"
+        },
+        {
+          "id": "29",
+          "name": "Mirialan"
+        },
+        {
+          "id": "30",
+          "name": "Clawdite"
+        },
+        {
+          "id": "31",
+          "name": "Besalisk"
+        },
+        {
+          "id": "32",
+          "name": "Kaminoan"
+        },
+        {
+          "id": "33",
+          "name": "Skakoan"
+        },
+        {
+          "id": "34",
+          "name": "Muun"
+        },
+        {
+          "id": "35",
+          "name": "Togruta"
+        },
+        {
+          "id": "36",
+          "name": "Kaleesh"
+        },
+        {
+          "id": "37",
+          "name": "Pau'an"
+        }
+      ],
+      "vehicles": [
+        {
+          "id": "4",
+          "name": "Sand Crawler"
+        },
+        {
+          "id": "6",
+          "name": "T-16 skyhopper"
+        },
+        {
+          "id": "7",
+          "name": "X-34 landspeeder"
+        },
+        {
+          "id": "8",
+          "name": "TIELN starfighter"
+        },
+        {
+          "id": "14",
+          "name": "Snowspeeder"
+        },
+        {
+          "id": "16",
+          "name": "TIE bomber"
+        },
+        {
+          "id": "18",
+          "name": "AT-AT"
+        },
+        {
+          "id": "19",
+          "name": "AT-ST"
+        },
+        {
+          "id": "20",
+          "name": "Storm IV Twin-Pod cloud car"
+        },
+        {
+          "id": "24",
+          "name": "Sail barge"
+        },
+        {
+          "id": "25",
+          "name": "Bantha-II cargo skiff"
+        },
+        {
+          "id": "26",
+          "name": "TIEIN interceptor"
+        },
+        {
+          "id": "30",
+          "name": "Imperial Speeder Bike"
+        },
+        {
+          "id": "33",
+          "name": "Vulture Droid"
+        },
+        {
+          "id": "34",
+          "name": "Multi-Troop Transport"
+        },
+        {
+          "id": "35",
+          "name": "Armored Assault Tank"
+        },
+        {
+          "id": "36",
+          "name": "Single Trooper Aerial Platform"
+        },
+        {
+          "id": "37",
+          "name": "C-9979 landing craft"
+        },
+        {
+          "id": "38",
+          "name": "Tribubble bongo"
+        },
+        {
+          "id": "42",
+          "name": "Sith speeder"
+        },
+        {
+          "id": "44",
+          "name": "Zephyr-G swoop bike"
+        },
+        {
+          "id": "45",
+          "name": "Koro-2 Exodrive airspeeder"
+        },
+        {
+          "id": "46",
+          "name": "XJ-6 airspeeder"
+        },
+        {
+          "id": "50",
+          "name": "LAATi"
+        },
+        {
+          "id": "51",
+          "name": "LAATc"
+        },
+        {
+          "id": "53",
+          "name": "AT-TE"
+        },
+        {
+          "id": "54",
+          "name": "SPHA"
+        },
+        {
+          "id": "55",
+          "name": "Flitknot speeder"
+        },
+        {
+          "id": "56",
+          "name": "Neimoidian shuttle"
+        },
+        {
+          "id": "57",
+          "name": "Geonosian starfighter"
+        },
+        {
+          "id": "60",
+          "name": "Tsmeu-6 personal wheel bike"
+        },
+        {
+          "id": "62",
+          "name": "Emergency Firespeeder"
+        },
+        {
+          "id": "67",
+          "name": "Droid tri-fighter"
+        },
+        {
+          "id": "69",
+          "name": "Oevvaor jet catamaran"
+        },
+        {
+          "id": "70",
+          "name": "Raddaugh Gnasp fluttercraft"
+        },
+        {
+          "id": "71",
+          "name": "Clone turbo tank"
+        },
+        {
+          "id": "72",
+          "name": "Corporate Alliance tank droid"
+        },
+        {
+          "id": "73",
+          "name": "Droid gunship"
+        },
+        {
+          "id": "76",
+          "name": "AT-RT"
+        }
+      ],
+      "starships": [
+        {
+          "id": "2",
+          "name": "CR90 corvette"
+        },
+        {
+          "id": "3",
+          "name": "Star Destroyer"
+        },
+        {
+          "id": "5",
+          "name": "Sentinel-class landing craft"
+        },
+        {
+          "id": "9",
+          "name": "Death Star"
+        },
+        {
+          "id": "10",
+          "name": "Millennium Falcon"
+        },
+        {
+          "id": "11",
+          "name": "Y-wing"
+        },
+        {
+          "id": "12",
+          "name": "X-wing"
+        },
+        {
+          "id": "13",
+          "name": "TIE Advanced x1"
+        },
+        {
+          "id": "15",
+          "name": "Executor"
+        },
+        {
+          "id": "17",
+          "name": "Rebel transport"
+        },
+        {
+          "id": "21",
+          "name": "Slave 1"
+        },
+        {
+          "id": "22",
+          "name": "Imperial shuttle"
+        },
+        {
+          "id": "23",
+          "name": "EF76 Nebulon-B escort frigate"
+        },
+        {
+          "id": "27",
+          "name": "Calamari Cruiser"
+        },
+        {
+          "id": "28",
+          "name": "A-wing"
+        },
+        {
+          "id": "29",
+          "name": "B-wing"
+        },
+        {
+          "id": "31",
+          "name": "Republic Cruiser"
+        },
+        {
+          "id": "32",
+          "name": "Droid control ship"
+        },
+        {
+          "id": "39",
+          "name": "Naboo fighter"
+        },
+        {
+          "id": "40",
+          "name": "Naboo Royal Starship"
+        },
+        {
+          "id": "41",
+          "name": "Scimitar"
+        },
+        {
+          "id": "43",
+          "name": "J-type diplomatic barge"
+        },
+        {
+          "id": "47",
+          "name": "AA-9 Coruscant freighter"
+        },
+        {
+          "id": "48",
+          "name": "Jedi starfighter"
+        },
+        {
+          "id": "49",
+          "name": "H-type Nubian yacht"
+        },
+        {
+          "id": "52",
+          "name": "Republic Assault ship"
+        },
+        {
+          "id": "58",
+          "name": "Solar Sailer"
+        },
+        {
+          "id": "59",
+          "name": "Trade Federation cruiser"
+        },
+        {
+          "id": "61",
+          "name": "Theta-class T-2c shuttle"
+        },
+        {
+          "id": "63",
+          "name": "Republic attack cruiser"
+        },
+        {
+          "id": "64",
+          "name": "Naboo star skiff"
+        },
+        {
+          "id": "65",
+          "name": "Jedi Interceptor"
+        },
+        {
+          "id": "66",
+          "name": "arc-170"
+        },
+        {
+          "id": "68",
+          "name": "Banking clan frigte"
+        },
+        {
+          "id": "74",
+          "name": "Belbullab-22 starfighter"
+        },
+        {
+          "id": "75",
+          "name": "V-wing"
+        }
+      ]
     }
   }
 
@@ -380,7 +1171,7 @@ export class CardsService {
       };
     }
     const dataUrl = resource.url.split("/");
-    resource.imageUrl = "/assets/images/categories/" + dataUrl[4] + "/" + this.resourceMap[dataUrl[4]][dataUrl[5]];
+    resource.imageUrl = "/assets/images/categories/" + dataUrl[4] + "/" + this.resourceMap[dataUrl[4]].find(x => x.id === dataUrl[5]).name.toLowerCase().replace(/\ /gi, "-") + ".jpg";
 
     return resource;
   }
@@ -391,8 +1182,8 @@ export class CardsService {
       const dataUrl = item.split("/");
       cards.push({
         url: "/resources/" + dataUrl[4] + "/" + dataUrl[5],
-        imageUrl: "/assets/images/categories/" + dataUrl[4] + "/" + this.resourceMap[dataUrl[4]][dataUrl[5]],
-        name: dataUrl[5]
+        imageUrl: "/assets/images/categories/" + dataUrl[4] + "/" + this.resourceMap[dataUrl[4]].find(x => x.id === dataUrl[5]).name.toLowerCase().replace(/\ /gi, "-") + ".jpg",
+        name: this.resourceMap[dataUrl[4]].find(x => x.id === dataUrl[5]).name
       });
     });
     return cards;
