@@ -1,1 +1,45 @@
 <p>species works!</p>
+<app-loading *ngIf="loading"></app-loading>
+<section class="section-content" *ngIf="resource">
+  <h1>{{resource.name}}</h1>
+  <div class="row">
+    <div class="col-sm">
+      <img class="img-description" src="{{resource.imageUrl}}" alt="{{resource.title}}" />
+    </div>
+    <div class="col-sm">
+      <h3>CLASSIFICATION:</h3>
+      <p>{{resource.classification}}</p>
+      <h3>DESIGNATION:</h3>
+      <p>{{resource.designation}}</p>
+      <h3>AVERAGE HEIGHT:</h3>
+      <p>{{resource.average_height}}</p>
+      <h3>AVERAGE LIFESPAN:</h3>
+      <p>{{resource.average_lifespan}}</p>
+      <h3>EYE COLORS:</h3>
+      <p>{{resource.eye_colors}}</p>
+      <h3>HAIR COLORS:</h3>
+      <p>{{resource.hair_colors}}</p>
+      <h3>SKIN COLORS:</h3>
+      <p>{{resource.skin_colors}}</p>
+      <h3>LANGUAGE:</h3>
+      <p>{{resource.language}}</p>
+      <h3>HOMEWORLD:</h3>
+      <p>{{resource.homeworld}}</p>
+      <h3>PEOPLE:</h3>
+      <p>{{resource.people}}</p>
+      <h3>FILMS:</h3>
+      <p>{{resource.films}}</p>
+    </div>
+    <div class="col-sm">
+      <h3>RELEASE DATE:</h3>
+      <p>{{resource.release_date}}</p>
+    </div>
+  </div>
+  <h3>OPENING CRAWL:</h3>
+  <p>{{resource.opening_crawl}}</p>
+  <app-resource [resource]="resource.species"></app-resource>
+  <app-resource [resource]="resource.starships"></app-resource>
+  <app-resource [resource]="resource.vehicles"></app-resource>
+  <app-resource [resource]="resource.characters"></app-resource>
+  <app-resource [resource]="resource.planets"></app-resource>
+</section>

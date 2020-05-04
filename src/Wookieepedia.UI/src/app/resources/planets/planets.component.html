@@ -1,1 +1,42 @@
-<p>planets works!</p>
+<app-loading *ngIf="loading"></app-loading>
+<section class="section-content" *ngIf="resource">
+  <h1>{{resource.name}}</h1>
+  <div class="row">
+    <div class="col-sm">
+      <img class="img-description" src="{{resource.imageUrl}}" alt="{{resource.name}}" />
+    </div>
+    <div class="col-sm">
+      <h3> DIAMETER:</h3>
+      <p>{{resource.diameter}}</p>
+      <h3> ROTATION PERIOD:</h3>
+      <p>{{resource.rotation_period}}</p>
+      <h3>ORBITAL PERIOD:</h3>
+      <p>{{resource.orbital_period}}</p>
+      <h3>GRAVITY:</h3>
+      <p>{{resource.orbital_period}}</p>
+      <h3>POPULATION:</h3>
+      <p>{{resource.population}}</p>
+      <h3>CLIMATE:</h3>
+      <p>{{resource.climate}}</p>
+      <h3>TERRAIN:</h3>
+      <p>{{resource.terrain}}</p>
+      <h3>SUPERFACE WATER:</h3>
+      <p>{{resource.surface_water:}}</p>
+      <h3>RESIDENTS:</h3>
+      <p>{{resource.residents}}</p>
+      <h3>FILMS:</h3>
+      <p>{{resource.films}}</p>
+      
+    </div>
+    <div class="col-sm">
+      <h3>RELEASE DATE:</h3>
+      <p>{{resource.release_date}}</p>
+    </div>
+  </div>
+    <app-resource [resource]="resource.films"></app-resource>
+    <app-resource [resource]="resource.species"></app-resource>
+    <app-resource [resource]="resource.vehicles"></app-resource>
+    <app-resource [resource]="resource.starships"></app-resource>
+    <app-resource [resource]="resource.people"></app-resource>
+    <app-resource [resource]="resource.planets"></app-resource>
+</section>
