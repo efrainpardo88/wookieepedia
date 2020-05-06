@@ -5,6 +5,8 @@ PROYECTO FRONTEND – STAR WARS APP
 
 Politecnico Gran Colombiano
 
+Sitio: http://wookieepedia.atwebpages.com/resources/films/7
+
 **Descripción:**
 
 Los colaboradores de este proyecto han sido contratados por una empresa de entretenimiento que quiere generar un catálogo de las películas de starwars, Su función principal es realizar el front-end en Angular de una aplicación que muestra toda la información de las películas de Star Wars. La empresa le suministrara una solución de backend, el cual dispone un api REST para consultar la información contenida sobre las películas (películas, personajes, planetas, naves, etc…).
