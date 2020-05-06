@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+import { CardsService } from 'src/app/services/cards.service';
+import { PlanetsService } from 'src/app/services/planets.service';
+import { Planet } from 'src/app/models/planet';
 
 @Component({
   selector: 'app-planets',
@@ -7,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanetsComponent implements OnInit {
 
-  resource: planet;
+  resource: Planet;
   resourceImage: string;
   loading = false;
 

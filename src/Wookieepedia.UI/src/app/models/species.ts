@@ -1,6 +1,7 @@
 import { Resource } from './resource';
 
 export interface Species {
+  title: string;
   name: string;
   classification: string;
   designation: string;
@@ -15,4 +16,12 @@ export interface Species {
   films: Resource[];
   url: string;
   imageUrl: string;
+  residents: Resource[];
+  species: Resource[];
+  vehicles: Resource[];
+  starships: Resource[];
+  characters: Resource[];
+  release_date:string[];
+  planets: Resource[];
+  opening_crawl: string;
 }
