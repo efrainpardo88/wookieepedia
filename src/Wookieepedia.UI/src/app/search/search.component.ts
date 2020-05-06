@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { CardsService } from 'src/app/services/cards.service';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
@@ -57,6 +57,8 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
+
     this.titleService.setTitle('Search | Wookieepedia');
     this.route.queryParams.subscribe(params => {
       const categories = params.category ? params.category.split(",") : [];
@@ -73,7 +75,7 @@ export class SearchComponent implements OnInit {
       this.loading = true;
       if (this.selectedCategories.length > 0) {
         this.selectedCategories.forEach(i => {
-          this.service.getFilteredResource(this.filter, i.id).subscribe(data => {
+          this.service.getFilteredResource(this.filter, i.id).subscribe(data => {            
             this.setResource(data, i);
           })
         })
@@ -102,6 +104,10 @@ export class SearchComponent implements OnInit {
   }
 
   setResource(resource: Resource, info) {
+    if (info.id === "films" && this.selectedYears.length > 0) {
+      resource.results = resource.results.filter(x => this.selectedYears.some(y => y.id === x["release_date"].slice(0, 4)));
+      resource.count = resource.results.length;
+    }
     resource.results = this.cards.getResourceAsCard(resource.results);
     resource.resourceType = info.name;
     if (resource.next || resource.previous) {

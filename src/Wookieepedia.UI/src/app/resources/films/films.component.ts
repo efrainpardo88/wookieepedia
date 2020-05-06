@@ -24,6 +24,8 @@ export class FilmsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
+
     this.loading = true;
     this.route.params.subscribe(params => {
       this.service.getFilmById(params.id).subscribe(data => {

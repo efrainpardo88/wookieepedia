@@ -1,7 +1,7 @@
 <app-loading *ngIf="loading"></app-loading>
-<div class="resource-container">
+<div *ngIf="resource.count > 0" class="resource-container">
   <h3>{{resource.resourceType}} ({{resource.count}})</h3>
-  <div *ngIf="resource.count > 0" class="cards-container" style="grid-template-rows: repeat({{(resource.previous || resource.next) ? (resource.count > 5 ? 2 : 1) : Math.ceil(resource.count/5)}}, 300px);">
+  <div class="cards-container" style="grid-template-rows: repeat({{(resource.previous || resource.next) ? (resource.count > 5 ? 2 : 1) : Math.ceil(resource.count/5)}}, 300px);">
     <a *ngFor="let card of resource.results;" href="{{card.url}}">
       <div style="background-image:url('{{card.imageUrl}}')"></div>
       <span>{{card.name}}</span>

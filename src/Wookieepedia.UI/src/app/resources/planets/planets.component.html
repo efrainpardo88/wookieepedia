@@ -13,7 +13,9 @@
       <h3>ORBITAL PERIOD:</h3>
       <p>{{resource.orbital_period}}</p>
       <h3>GRAVITY:</h3>
-      <p>{{resource.orbital_period}}</p>
+      <p>{{resource.orbital_period}}</p>      
+    </div>
+    <div class="col-sm">S
       <h3>POPULATION:</h3>
       <p>{{resource.population}}</p>
       <h3>CLIMATE:</h3>
@@ -21,22 +23,9 @@
       <h3>TERRAIN:</h3>
       <p>{{resource.terrain}}</p>
       <h3>SUPERFACE WATER:</h3>
-      <p>{{resource.surface_water:}}</p>
-      <h3>RESIDENTS:</h3>
-      <p>{{resource.residents}}</p>
-      <h3>FILMS:</h3>
-      <p>{{resource.films}}</p>
-      
-    </div>
-    <div class="col-sm">
-      <h3>RELEASE DATE:</h3>
-      <p>{{resource.release_date}}</p>
+      <p>{{resource.surface_water}}</p>
     </div>
   </div>
     <app-resource [resource]="resource.films"></app-resource>
-    <app-resource [resource]="resource.species"></app-resource>
-    <app-resource [resource]="resource.vehicles"></app-resource>
-    <app-resource [resource]="resource.starships"></app-resource>
-    <app-resource [resource]="resource.people"></app-resource>
-    <app-resource [resource]="resource.planets"></app-resource>
+    <app-resource [resource]="resource.residents"></app-resource>
 </section>

@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+import { SpeciesService } from 'src/app/services/species.service';
+import { CardsService } from 'src/app/services/cards.service';
+import { Species } from '../../models/species';
 
 @Component({
   selector: 'app-species',
@@ -7,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpeciesComponent implements OnInit {
 
-  resource: Film;
+  resource: Species;
   resourceImage: string;
   loading = false;
 
@@ -20,10 +25,12 @@ export class SpeciesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
+
     this.loading = true;
     this.route.params.subscribe(params => {
-      this.service.getSpecieById(params.id).subscribe(data => {
-        this.titleService.setTitle(data.title + ' | Wookieepedia');
+      this.service.getSpeciesById(params.id).subscribe(data => {
+        this.titleService.setTitle(data.name + ' | Wookieepedia');
         this.resource = this.cards.getResourceWithCards(data);
         this.loading = false;
       });

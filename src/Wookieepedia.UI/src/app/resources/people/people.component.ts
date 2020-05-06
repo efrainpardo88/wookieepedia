@@ -23,6 +23,8 @@ export class PeopleComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
+
     this.loading = true;
     this.route.params.subscribe(params => {
       this.service.getPeopleById(params.id).subscribe(data => {

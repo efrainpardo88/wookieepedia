@@ -22,6 +22,8 @@ export class StarshipsComponent implements OnInit {
     ) { }
     
   ngOnInit(): void {
+    window.scrollTo(0, 0);
+
     this.loading = true;
     this.route.params.subscribe(params => {
       this.service.getStarshipById(params.id).subscribe(data => {

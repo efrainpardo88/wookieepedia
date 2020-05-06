@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+import { PlanetsService } from 'src/app/services/planets.service';
+import { CardsService } from 'src/app/services/cards.service';
+import { Planet } from '../../models/planet';
 
 @Component({
   selector: 'app-planets',
@@ -7,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanetsComponent implements OnInit {
 
-  resource: planet;
+  resource: Planet;
   resourceImage: string;
   loading = false;
 
@@ -21,11 +26,12 @@ export class PlanetsComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
 
     this.loading = true;
     this.route.params.subscribe(params => {
       this.service.getPlanetById(params.id).subscribe(data => {
-        this.titleService.setTitle(data.title + ' | Wookieepedia');
+        this.titleService.setTitle(data.name + ' | Wookieepedia');
         this.resource = this.cards.getResourceWithCards(data);
         this.loading = false;
       });
